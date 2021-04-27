@@ -24,7 +24,6 @@ def get_hikes():
     hikes = mongo.db.hikes.find()
     # count number of hikes in the db
     total_hikes = mongo.db.hikes.count_documents({})
-    
     # sum the lengths of all the hikes in the db
     sum_hike_lengths = mongo.db.hikes.aggregate([{
         '$group': {
@@ -36,10 +35,21 @@ def get_hikes():
     }])
     sum_hike_lengths = (list(sum_hike_lengths)[0]['total'])
 
+    # count number of hikes in each area
+    dublin_hikes_count = mongo.db.hikes.find(
+        {'area': 'Dublin Mountains'}).count()
+    wicklow_hikes_count = mongo.db.hikes.find(
+        {'area': 'Wicklow Mountains'}).count()
+    kerry_hikes_count = mongo.db.hikes.find(
+        {'area': 'Kerry Mountains'}).count()
+
     return render_template('hikes.html',
                            hikes=hikes,
                            sum_hike_lengths=sum_hike_lengths,
-                           total_hikes=total_hikes)
+                           total_hikes=total_hikes,
+                           dublin_hikes_count=dublin_hikes_count,
+                           wicklow_hikes_count=wicklow_hikes_count,
+                           kerry_hikes_count=kerry_hikes_count)
 
 
 @app.route('/register', methods=['GET', 'POST'])
