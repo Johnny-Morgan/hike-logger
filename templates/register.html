@@ -6,16 +6,17 @@
             <div class="card mt-5">
                 <h5 class="card-header text-white bg-dark">Register</h5>
                 <div class="card-body">
-                    <form method="POST" action="{{ url_for('register') }}">
+                    <form method="POST" action="{{ url_for('register') }}" class="needs-validation" novalidate>
                         <!-- Username -->
                         <div class="form-group">
                             <label for="username">Username</label>
                             <input type="text" class="form-control" name="username" id="username"
                                 placeholder="Enter username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
                                 required>
-                            <small class="form-text text-muted ml-2">Enter a combination of at least 5 letters and
+                            <div class="invalid-feedback">
+                                Your username must be at least 5 characters long and contain letters and/or
                                 numbers.
-                            </small>
+                            </div>
                         </div>
                         <!-- Password -->
                         <div class="form-group">
@@ -23,9 +24,9 @@
                             <input type="password" class="form-control" name="password" id="password"
                                 placeholder="Enter Password" minlength="8" pattern="^[a-zA-Z0-9]{8,15}$" maxlength="15"
                                 aria-describedby="passwordHelpBlock" required>
-                            <small class="form-text text-muted ml-2">
-                                Your password must be 8-15 characters long and contain letters and numbers.
-                            </small>
+                            <div class="invalid-feedback">
+                                Your password must be 8-15 characters long and contain letters and/or numbers.
+                            </div>
                         </div>
                         <!-- Register -->
                         <button type="submit" class="btn btn-success">Register</button>
