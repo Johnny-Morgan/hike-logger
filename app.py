@@ -29,11 +29,12 @@ def get_hikes():
 def register():
     if request.method == 'POST':
         # check if username already exists in the database
+        user = request.form.get('username')
         existing_user = mongo.db.users.find_one(
             {'username': request.form.get('username')})
 
         if existing_user:
-            flash('Username already exists',
+            flash('The username "' + user + '" already exists',
                   category='danger')
             return redirect(url_for("register"))
 
@@ -47,7 +48,7 @@ def register():
         # put the new user into 'session' cookie
         session['user'] = request.form.get('username')
         flash('Registration Successful!', category='success')
-        return redirect(url_for('get_hikes'))  
+        return redirect(url_for('get_hikes'))
     return render_template('register.html')
 
 
