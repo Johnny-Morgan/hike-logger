@@ -22,7 +22,24 @@ mongo = PyMongo(app)
 @app.route('/get_hikes')
 def get_hikes():
     hikes = mongo.db.hikes.find()
-    return render_template('hikes.html', hikes=hikes)
+    # count number of hikes in the db
+    total_hikes = mongo.db.hikes.count_documents({})
+    
+    # sum the lengths of all the hikes in the db
+    sum_hike_lengths = mongo.db.hikes.aggregate([{
+        '$group': {
+            '_id': 'null',
+            'total': {
+                '$sum': '$length'
+            }
+        }
+    }])
+    sum_hike_lengths = (list(sum_hike_lengths)[0]['total'])
+
+    return render_template('hikes.html',
+                           hikes=hikes,
+                           sum_hike_lengths=sum_hike_lengths,
+                           total_hikes=total_hikes)
 
 
 @app.route('/register', methods=['GET', 'POST'])
