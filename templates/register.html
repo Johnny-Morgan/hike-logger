@@ -22,10 +22,12 @@
                         <div class="form-group">
                             <label for="password">Password</label>
                             <input type="password" class="form-control" name="password" id="password"
-                                placeholder="Enter Password" minlength="8" pattern="^[a-zA-Z0-9]{8,15}$" maxlength="15"
+                                placeholder="Enter Password" minlength="8"
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" maxlength="15"
                                 aria-describedby="passwordHelpBlock" required>
                             <div class="invalid-feedback">
-                                Your password must be 8-15 characters long and contain letters and/or numbers.
+                                Your password must contain at least one number, one uppercase letter, one lowercase
+                                letter, and be 8-15 characters long.
                             </div>
                         </div>
                         <!-- Register -->
