@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
+<h1 class="text-center my-4">Hike Logger</h1>
 
 <div class="container">
     <div class="row mb-2">
@@ -64,6 +65,31 @@
                 <div class="card-body bg-light">
                     <h3 class="card-title">{{kerry_hikes_count}}</h3>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+
+            <div class="table-responsive">
+                <table class="table table-dark table-striped table-bordered">
+                    <tr>
+                        <th></th>
+                        <th>Name</th>
+                        <th>Length (km)</th>
+                        <th>Time (hours)</th>
+                        <th>Area</th>
+                    </tr>
+                    {% for hike in hikes %}
+                    <tr>
+                        <td></td>
+                        <td>{{hike.name}}</td>
+                        <td>{{hike.length}}</td>
+                        <td>{{hike.time}}</td>
+                        <td>{{hike.area}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
             </div>
         </div>
     </div>
