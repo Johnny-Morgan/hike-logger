@@ -16,3 +16,13 @@
         });
     }, false);
 })();
+
+
+// Add the class table-sm to the hikes table for screens less than 500px
+$(window).on('resize', function () {
+    if ($(window).width() < 500) {
+        $('.table').addClass('table-sm');
+    } else {
+        $('.table').removeClass('table-sm');
+    }
+});
