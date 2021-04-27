@@ -1,21 +1,40 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{% for hike in hikes %}
-{{hike.name}}<br>
-{{hike.area}}<br>
-{{hike.length}}<br>
-{{hike.time}}<br>
-{{hike.notes}}<br>
-{{hike.added_by}}<br>
-{% for hiker in hike.hiked_by %}
-{% for name, date in hiker.items()%}
-{{name}}
-{{date}}
-{% endfor %}
-<br>
-{% endfor %}
-<br>
-{% endfor %}
+
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-sm-12 col-md-4">
+            <div class="card text-center mb-3">
+                <div class="card-header bg-success">
+                    <h5 class="card-title">Total Hikes</h5>
+                </div>
+                <div class="card-body bg-light">
+                    <h3 class="card-title"></h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="card text-center mb-3">
+                <div class="card-header bg-success">
+                    <h5 class="card-title">Total Length</h5>
+                </div>
+                <div class="card-body bg-light">
+                    <h3 class="card-title"></h3>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="card text-center mb-3">
+                <div class="card-header bg-success">
+                    <h5 class="card-title">Average Length</h5>
+                </div>
+                <div class="card-body bg-light">
+                    <h3 class="card-title"></h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
