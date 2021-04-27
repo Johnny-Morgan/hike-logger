@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3">
+            <div class="card mt-5">
+                <h5 class="card-header text-white bg-dark">Register</h5>
+                <div class="card-body">
+                    <form method="POST" action="{{ url_for('register') }}">
+                        <!-- Username -->
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" name="username" id="username"
+                                placeholder="Enter username" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$"
+                                required>
+                            <small class="form-text text-muted ml-2">Enter a combination of at least 5 letters and
+                                numbers.
+                            </small>
+                        </div>
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" name="password" id="password"
+                                placeholder="Enter Password" minlength="8" pattern="^[a-zA-Z0-9]{8,15}$" maxlength="15"
+                                aria-describedby="passwordHelpBlock" required>
+                            <small class="form-text text-muted ml-2">
+                                Your password must be 8-15 characters long and contain letters and numbers.
+                            </small>
+                        </div>
+                        <!-- Register -->
+                        <button type="submit" class="btn btn-success">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
