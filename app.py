@@ -157,6 +157,26 @@ def hike(hike_id):
     return render_template('hike.html', hike=hike, hikers=hikers, user_hike_date=user_hike_date)
 
 
+@app.route('/add_hike', methods=['GET', 'POST'])
+def add_hike():
+    if request.method == 'POST':
+        hike = {
+            'name': request.form.get('name'),
+            'area': request.form.get('area'),
+            'length': float(request.form.get('length')),
+            'time': request.form.get('time'),
+            'notes': request.form.get('notes'),
+            'added_by': session['user'],
+            'img_url': request.form.get('photo')
+        }
+        mongo.db.hikes.insert_one(hike)
+        flash('Hike successfully added', category='success')
+        return redirect(url_for('get_hikes'))
+    areas = mongo.db.areas.find().sort('name', 1)
+    times = mongo.db.times.find().sort('time', 1)
+    return render_template('add_hike.html', areas=areas, times=times)
+
+
 @app.route('/delete_hike<hike_id>', methods=['GET', 'POST'])
 def delete_hike(hike_id):
     if request.method == 'POST':
@@ -166,7 +186,7 @@ def delete_hike(hike_id):
     hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
     return render_template('delete_hike.html', hike=hike)
 
-    
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
