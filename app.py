@@ -85,7 +85,7 @@ def login():
         # check if username already exists in the db
         existing_user = mongo.db.users.find_one(
             {'username': request.form.get('username')})
-            
+
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
@@ -119,8 +119,29 @@ def logout():
 @app.route('/profile/<username>', methods=['GET', 'POST'])
 def profile(username):
     hikes = mongo.db.hikes.find()
+
+    '''loop through all hikes in db,
+    all hikes that the user has hiked
+    are appended to users_hikes array'''
+    users_hikes = []
+    total_hikes_length = 0
+
+    for hike in hikes:
+        for hiker in hike['hiked_by']:
+            for name in hiker.keys():
+                if name == session['user']:
+                    users_hikes.append(hike)
+                    # calculate total length of all hikes user has hiked
+                    total_hikes_length += hike['length']
+
+    total_hikes = len(users_hikes)
+
     if session['user']:
-        return render_template('profile.html', hikes=hikes)
+        return render_template('profile.html',
+                                hikes=hikes,
+                                users_hikes=users_hikes,
+                                total_hikes=total_hikes,
+                                total_hikes_length=total_hikes_length)
     return redirect(url_for('login'))
 
 
