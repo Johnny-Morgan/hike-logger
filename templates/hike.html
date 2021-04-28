@@ -28,7 +28,12 @@
                         <li>
                             <strong>Hiked by:</strong>
                             {% for hiker in hikers %}
+                            {% if loop.index != loop.length %}
                             {{hiker}},
+                            {% else %}
+                            <!-- Remove comma after last hiker in array is displayed -->
+                            {{hiker}}.
+                            {% endif %}
                             {% endfor %}
                         </li>
                     </ul>
