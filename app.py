@@ -192,6 +192,18 @@ def delete_hike(hike_id):
     return render_template('delete_hike.html', hike=hike)
 
 
+@app.route('/complete_hike/<hike_id>', methods=['GET', 'POST'])
+def complete_hike(hike_id):
+    hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
+    if request.method == 'POST':
+        mongo.db.hikes.update(
+            {'name': hike['name']},
+            {'$push': {'hiked_by': {session['user']: request.form.get('date')}}})
+        flash('Hike Completed', category='success')
+        return redirect(url_for('hike', hike_id=hike['_id']))
+    return render_template('complete_hike.html', hike=hike)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
