@@ -41,3 +41,11 @@ $('#picker').datetimepicker({
     format: 'd-M-Y',
     value: today,
 });
+
+// Datepicker for editing a hike
+// the value variable is removed as this value is take from the database
+$('#edit-date-picker').datetimepicker({
+    timepicker: false,
+    datepicker: true,
+    format: 'd-M-Y',
+});

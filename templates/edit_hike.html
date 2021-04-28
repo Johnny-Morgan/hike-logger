@@ -54,8 +54,8 @@
                 </div>
                 <div class="form-group col-sm-12 col-md-6">
                     <label for="date">Date:</label>
-                    <input type="text" class="form-control" id="picker" name="date" readonly='true' value={{hike.date}}
-                        required>
+                    <input type="text" class="form-control" id="edit-date-picker" name="date" readonly='true'
+                        value={{original_hike_date}} required>
                 </div>
                 <button type="submit" class="btn btn-success">Edit Hike</button>
                 <a class="btn btn-danger" href="{{ url_for('hike', hike_id=hike._id) }}">Cancel</a>
