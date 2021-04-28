@@ -153,7 +153,8 @@ def hike(hike_id):
     for hiker in hike['hiked_by']:
         for name, date in hiker.items():
             hikers.append(name)
-            user_hike_date = date
+            if name == session['user']:
+                user_hike_date = date
     return render_template('hike.html', hike=hike, hikers=hikers, user_hike_date=user_hike_date)
 
 
@@ -180,6 +181,50 @@ def add_hike():
     areas = mongo.db.areas.find().sort('name', 1)
     times = mongo.db.times.find().sort('time', 1)
     return render_template('add_hike.html', areas=areas, times=times)
+
+
+@app.route('/edit_hike<hike_id>', methods=['GET', 'POST'])
+def edit_hike(hike_id):
+    hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
+    hikers = hike['hiked_by']
+   
+    original_hike_date = ''
+    for hiker in hikers:
+        for name in hiker.keys():
+            if name == session['user']:
+                # save original hike date to populate date input of form 
+                original_hike_date = hiker[name]
+                # update users hike date with new date from form
+                hiker[name] = request.form.get('date')
+
+    if request.method == 'POST':
+        submit = {
+            'name': request.form.get('name'),
+            'area': request.form.get('area'),
+            'length': float(request.form.get('length')),
+            'time': request.form.get('time'),
+            'notes': request.form.get('notes'),
+            'added_by': session['user'],
+            'img_url': request.form.get('photo'),
+        }
+        mongo.db.hikes.update({'_id': ObjectId(hike_id)}, submit)
+
+        # Repopulate hiked_by array in db 
+        for hiker in hikers:
+            for name, date in hiker.items():
+                mongo.db.hikes.update(
+                    {'name': hike['name']},
+                    {'$push':
+                        {'hiked_by':
+                            {name: date}}})
+
+        flash('Hike successfully edited', category='success')
+        return redirect(url_for('get_hikes'))
+
+    # areas and times required to populate the form
+    areas = mongo.db.areas.find().sort('name', 1)
+    times = mongo.db.times.find().sort('time', 1)
+    return render_template('edit_hike.html', hike=hike, areas=areas, times=times, original_hike_date=original_hike_date)
 
 
 @app.route('/delete_hike<hike_id>', methods=['GET', 'POST'])
