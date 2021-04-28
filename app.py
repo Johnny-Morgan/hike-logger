@@ -149,10 +149,12 @@ def profile(username):
 def hike(hike_id):
     hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
     hikers = []
+    user_hike_date = ''
     for hiker in hike['hiked_by']:
-        for name in hiker.keys():
+        for name, date in hiker.items():
             hikers.append(name)
-    return render_template('hike.html', hike=hike, hikers=hikers)
+            user_hike_date = date
+    return render_template('hike.html', hike=hike, hikers=hikers, user_hike_date=user_hike_date)
 
 
 if __name__ == '__main__':
