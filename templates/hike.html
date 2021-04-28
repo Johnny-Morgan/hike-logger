@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row mx-3 my-3">
+    <div class="col-md-5">
+        <div class="row">
+            <div class="card card-body">
+                <h5>Hike: {{hike.name}}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="card card-body">
+                <h5>Notes:</h5>
+                <hr>
+                {{hike.notes}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="card card-body">
+                <h5>Stats:</h5>
+                <hr>
+                <ul>
+                    <li><strong>Area:</strong> {{hike.area}}</li>
+                    <li><strong>Length:</strong> {{hike.length}} km</li>
+                    <li><strong>Time:</strong> {{hike.time}} hours</li>
+                    <li><strong>Added by:</strong> {{hike.added_by}}</li>
+                    <li>
+                        <strong>Hiked by:</strong>
+                        {% for hiker in hikers %}
+                        {{hiker}},
+                        {% endfor %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-7">
+        <div class="card card-body">
+            <img class="photo" src="{{hike.img_url}}" alt="Hike image">
+        </div>
+    </div>
+</div>
+{% endblock %}

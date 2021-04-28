@@ -145,6 +145,16 @@ def profile(username):
     return redirect(url_for('login'))
 
 
+@app.route('/hike/<hike_id>')
+def hike(hike_id):
+    hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
+    hikers = []
+    for hiker in hike['hiked_by']:
+        for name in hiker.keys():
+            hikers.append(name)
+    return render_template('hike.html', hike=hike, hikers=hikers)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
