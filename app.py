@@ -170,6 +170,11 @@ def add_hike():
             'img_url': request.form.get('photo')
         }
         mongo.db.hikes.insert_one(hike)
+        mongo.db.hikes.update(
+            {'name': hike['name']},
+            {'$push':
+                {'hiked_by':
+                    {session['user']: request.form.get('date')}}})
         flash('Hike successfully added', category='success')
         return redirect(url_for('get_hikes'))
     areas = mongo.db.areas.find().sort('name', 1)
