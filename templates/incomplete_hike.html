@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1 class="text-center">{{hike.hike_name}}</h1>
+
+<div class="container">
+    <div class="card mt-5 login">
+        <h5 class="card-header text-white bg-dark">Mark this hike as incomplete?</h5>
+        <div class="card-body">
+            <form method="POST" action="{{ url_for('incomplete_hike', hike_id=hike._id) }}">
+                <button type="submit" class="btn btn-success">Yes</button>
+                <a class="btn btn-danger" href="{{ url_for('hike', hike_id=hike._id) }}">Cancel</a>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

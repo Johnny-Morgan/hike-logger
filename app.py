@@ -204,6 +204,23 @@ def complete_hike(hike_id):
     return render_template('complete_hike.html', hike=hike)
 
 
+@app.route('/incomplete_hike/<hike_id>', methods=['GET', 'POST'])
+def incomplete_hike(hike_id):
+    hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
+    user_hike_date = ''
+    for hiker in hike['hiked_by']:
+        for name, date in hiker.items():
+            if name == session['user']:
+                user_hike_date = date
+    if request.method == 'POST':
+        mongo.db.hikes.update(
+            {'name': hike['name']},
+            {'$pull': {'hiked_by': {session['user']: user_hike_date}}})
+        flash('Hike marked as incomplete', category='success')
+        return redirect(url_for('hike', hike_id=hike['_id']))
+    return render_template('incomplete_hike.html', hike=hike)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),

@@ -43,7 +43,8 @@
                 <div class="card card-body">
                     {% if session['user'] in hikers %}
                     <p>You completed this hike on {{user_hike_date}}</p>
-                    <p>Mark as <a href="" class="btn btn-sm btn-danger">incomplete</a></p>
+                    <p>Mark as <a href="{{ url_for('incomplete_hike', hike_id=hike._id) }}"
+                            class="btn btn-sm btn-danger">incomplete</a></p>
                     {% else %}
                     <p>You have not completed this hike.</p>
                     <p>Mark as <a href="{{ url_for('complete_hike', hike_id=hike._id) }}"
