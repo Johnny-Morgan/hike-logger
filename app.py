@@ -157,6 +157,16 @@ def hike(hike_id):
     return render_template('hike.html', hike=hike, hikers=hikers, user_hike_date=user_hike_date)
 
 
+@app.route('/delete_hike<hike_id>', methods=['GET', 'POST'])
+def delete_hike(hike_id):
+    if request.method == 'POST':
+        mongo.db.hikes.remove({'_id': ObjectId(hike_id)})
+        flash('Hike successfully deleted', category='success')
+        return redirect(url_for('get_hikes'))
+    hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
+    return render_template('delete_hike.html', hike=hike)
+
+    
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
