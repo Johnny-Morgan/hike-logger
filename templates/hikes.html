@@ -90,7 +90,7 @@
                         <tr>
                             <td>
                                 {% if session['user'] %}
-                                <a class="btn btn-sm btn-success" href="">View</a>
+                                <a class="btn btn-sm btn-success" href="{{ url_for('hike', hike_id=hike._id)}}">View</a>
                                 {% endif %}
                             </td>
                             <td>{{hike.name}}</td>
