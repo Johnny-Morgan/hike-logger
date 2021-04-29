@@ -6,10 +6,11 @@
 
 <div class="container">
     <div class="row mb-2">
-        <div class="col-sm-12 col-md-4">
+        {% for area in areas %}
+        <div class="col-sm-12 col-md-3">
             <div class="card text-center mb-3">
                 <div class="card-header bg-success">
-                    <h5 class="card-title">Dublin Mountains</h5>
+                    <h5 class="card-title">{{area.name}}</h5>
                 </div>
                 <div class="card-body bg-light">
                     <a href="" class="btn btn-success">Edit Area</a>
@@ -17,32 +18,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-4">
-            <div class="card text-center mb-3">
-                <div class="card-header bg-success">
-                    <h5 class="card-title">Wicklow Mountains</h5>
-                </div>
-                <div class="card-body bg-light">
-                    <a href="" class="btn btn-success">Edit Area</a>
-                    <a href="" class="btn btn-danger">Delete Area</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-4">
-            <div class="card text-center mb-3">
-                <div class="card-header bg-success">
-                    <h5 class="card-title">Kerry Mountains</h5>
-                </div>
-                <div class="card-body bg-light">
-                    <a href="" class="btn btn-success">Edit Area</a>
-                    <a href="" class="btn btn-danger">Delete Area</a>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <div class="row text-center">
         <div class="col">
-            <a href="{{ url_for('add_area')}}" class="btn btn-success">Add Area</a>
+            <a href="" class="btn btn-success">Add Area</a>
         </div>
     </div>
 </div>
