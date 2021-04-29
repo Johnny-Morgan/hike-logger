@@ -211,7 +211,7 @@ def edit_hike(hike_id):
         }
         mongo.db.hikes.update({'_id': ObjectId(hike_id)}, submit)
         flash('Hike successfully edited', category='success')
-        return redirect(url_for('get_hikes'))
+        return redirect(url_for('hike', hike_id=hike['_id']))
 
     # areas and times required to populate the form
     areas = mongo.db.areas.find().sort('name', 1)
