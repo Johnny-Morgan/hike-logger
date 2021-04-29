@@ -187,12 +187,13 @@ def add_hike():
 def edit_hike(hike_id):
     hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
     hikers = hike['hiked_by']
-   
     original_hike_date = ''
+
+    ##TODO replace nested for loop with mongodb query
     for hiker in hikers:
         for name in hiker.keys():
             if name == session['user']:
-                # save original hike date to populate date input of form 
+                # save original hike date to populate date input of form
                 original_hike_date = hiker[name]
                 # update users hike date with new date from form
                 hiker[name] = request.form.get('date')
@@ -206,18 +207,9 @@ def edit_hike(hike_id):
             'notes': request.form.get('notes'),
             'added_by': session['user'],
             'img_url': request.form.get('photo'),
+            'hiked_by': hikers
         }
         mongo.db.hikes.update({'_id': ObjectId(hike_id)}, submit)
-
-        # Repopulate hiked_by array in db 
-        for hiker in hikers:
-            for name, date in hiker.items():
-                mongo.db.hikes.update(
-                    {'name': hike['name']},
-                    {'$push':
-                        {'hiked_by':
-                            {name: date}}})
-
         flash('Hike successfully edited', category='success')
         return redirect(url_for('get_hikes'))
 
