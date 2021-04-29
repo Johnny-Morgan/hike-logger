@@ -258,6 +258,12 @@ def incomplete_hike(hike_id):
     return render_template('incomplete_hike.html', hike=hike)
 
 
+@app.route('/dashboard')
+def dashboard():
+    areas = list(mongo.db.areas.find().sort('name', 1))
+    return render_template('dashboard.html', areas=areas)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
