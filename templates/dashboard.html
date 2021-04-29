@@ -5,44 +5,50 @@
 <h1 class="text-center my-4">Dashboard</h1>
 
 <div class="container">
-    <div class="row mb-2">
-        {% for area in areas %}
-        <div class="col-sm-12 col-md-3">
-            <div class="card text-center mb-3">
-                <div class="card-header bg-success">
-                    <h5 class="card-title">{{area.name}}</h5>
-                </div>
-                <div class="card-body bg-light">
-                    <a href="" class="btn btn-success">Edit Area</a>
-                    <a href="" class="btn btn-danger">Delete Area</a>
-                </div>
-            </div>
-        </div>
-        {% endfor %}
-    </div>
-    <div class="row text-center mb-5">
-        <div class="col">
-            <a href="" class="btn btn-success">Add Area</a>
-        </div>
-    </div>
-    <div class="row mb-2">
-        {% for time in times %}
-        <div class="col-sm-12 col-md-3">
-            <div class="card text-center mb-3">
-                <div class="card-header bg-success">
-                    <h5 class="card-title">{{time.time}}</h5>
-                </div>
-                <div class="card-body bg-light">
-                    <a href="" class="btn btn-success">Edit Time</a>
-                    <a href="" class="btn btn-danger">Delete Time</a>
+    <div class="card p-4 mb-5">
+        <h2 class="text-center mb-4">Hike Areas</h2>
+        <div class="row">
+            {% for area in areas %}
+            <div class="col-sm-12 col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-header bg-success">
+                        <h5 class="card-title">{{area.name}}</h5>
+                    </div>
+                    <div class="card-body bg-light">
+                        <a href="" class="btn btn-sm btn-success">Edit Area</a>
+                        <a href="" class="btn btn-sm btn-danger">Delete Area</a>
+                    </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
+        <div class="row text-center mt-4">
+            <div class="col">
+                <a href="" class="btn btn-success">Add Area</a>
+            </div>
+        </div>
     </div>
-    <div class="row text-center mb-5">
-        <div class="col">
-            <a href="" class="btn btn-success">Add Time</a>
+    <div class="card p-4 mb-5">
+        <h2 class="text-center mb-4">Hike Times</h2>
+        <div class="row">
+            {% for time in times %}
+            <div class="col-sm-12 col-md-3  mb-3">
+                <div class="card text-center">
+                    <div class="card-header bg-success">
+                        <h5 class="card-title">{{time.time}} hours</h5>
+                    </div>
+                    <div class="card-body bg-light">
+                        <a href="" class="btn btn-sm btn-success">Edit Time</a>
+                        <a href="" class="btn btn-sm btn-danger">Delete Time</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="row text-center mt-4">
+            <div class="col">
+                <a href="" class="btn btn-success">Add Area</a>
+            </div>
         </div>
     </div>
 </div>
