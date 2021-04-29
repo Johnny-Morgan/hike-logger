@@ -38,6 +38,9 @@
                     <a class="nav-item nav-link mr-3" href="{{ url_for('profile', username=session['user']) }}">My
                         Profile</a>
                     <a class="nav-item nav-link mr-3" href="{{ url_for('add_hike') }}">Add Hike</a>
+                    {% if session.user == 'admin' %}
+                    <a class="nav-item nav-link mr-3" href="{{ url_for('dashboard') }}">Dashboard</a>
+                    {% endif %}
                     <a class="nav-item nav-link mr-3" href="{{ url_for('logout') }}">Logout</a>
                     {% else %}
                     <a class="nav-item nav-link mr-3" href="{{ url_for('login') }}">Login</a>
