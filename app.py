@@ -261,7 +261,8 @@ def incomplete_hike(hike_id):
 @app.route('/dashboard')
 def dashboard():
     areas = list(mongo.db.areas.find().sort('name', 1))
-    return render_template('dashboard.html', areas=areas)
+    times = list(mongo.db.times.find().sort('time', 1))
+    return render_template('dashboard.html', areas=areas, times=times)
 
 
 if __name__ == '__main__':

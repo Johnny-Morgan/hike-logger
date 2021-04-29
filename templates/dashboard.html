@@ -20,12 +20,31 @@
         </div>
         {% endfor %}
     </div>
-    <div class="row text-center">
+    <div class="row text-center mb-5">
         <div class="col">
             <a href="" class="btn btn-success">Add Area</a>
         </div>
     </div>
+    <div class="row mb-2">
+        {% for time in times %}
+        <div class="col-sm-12 col-md-3">
+            <div class="card text-center mb-3">
+                <div class="card-header bg-success">
+                    <h5 class="card-title">{{time.time}}</h5>
+                </div>
+                <div class="card-body bg-light">
+                    <a href="" class="btn btn-success">Edit Time</a>
+                    <a href="" class="btn btn-danger">Delete Time</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="row text-center mb-5">
+        <div class="col">
+            <a href="" class="btn btn-success">Add Time</a>
+        </div>
+    </div>
 </div>
-
 
 {% endblock %}
