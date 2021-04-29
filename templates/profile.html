@@ -31,7 +31,11 @@
                     <h5 class="card-title">Average Length</h5>
                 </div>
                 <div class="card-body bg-light">
+                    {% if total_hikes != 0 %}
                     <h3 class="card-title">{{"%.2f"|format(total_hikes_length / total_hikes)}} km</h3>
+                    {% else %}
+                    <h3 class="card-title">0 km</h3>
+                    {% endif %}
                 </div>
             </div>
         </div>
