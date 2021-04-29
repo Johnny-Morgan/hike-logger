@@ -1,7 +1,8 @@
 import os
+from functools import wraps
 from flask import (
     Flask, flash, render_template,
-    redirect, request, session, url_for)
+    redirect, request, session, url_for, abort)
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -258,7 +259,20 @@ def incomplete_hike(hike_id):
     return render_template('incomplete_hike.html', hike=hike)
 
 
+# CREDIT - https://stackoverflow.com/questions/25233188/what-is-the-best-way-to-protect-a-flask-endpoint
+def role_required(role_name):
+    def decorator(func):
+        @wraps(func)
+        def authorize(*args, **kwargs):
+            if session['user'] != 'admin':
+                abort(403)
+            return func(*args, **kwargs)
+        return authorize
+    return decorator
+
+
 @app.route('/dashboard')
+@role_required('admin')
 def dashboard():
     areas = list(mongo.db.areas.find().sort('name', 1))
     times = list(mongo.db.times.find().sort('time', 1))
