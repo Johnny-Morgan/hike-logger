@@ -298,6 +298,13 @@ def add_area():
 @app.route('/edit_area<area_id>', methods=['GET', 'POST'])
 def edit_area(area_id):
     area = mongo.db.areas.find_one({'_id': ObjectId(area_id)})
+    if request.method == 'POST':
+        area = {
+            'name': request.form.get('name')
+        }
+        mongo.db.areas.update({'_id': ObjectId(area_id)}, area)
+        flash('Area successfully edited', category='success')
+        return redirect(url_for('dashboard'))
     return render_template('edit_area.html', area=area)
 
 
