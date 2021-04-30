@@ -292,8 +292,13 @@ def add_area():
         mongo.db.areas.insert_one(area)
         flash('Area successfully added', category='success')
         return redirect(url_for('dashboard'))
-
     return render_template('add_area.html')
+
+
+@app.route('/edit_area<area_id>', methods=['GET', 'POST'])
+def edit_area(area_id):
+    area = mongo.db.areas.find_one({'_id': ObjectId(area_id)})
+    return render_template('edit_area.html', area=area)
 
 
 @app.route('/delete_area<area_id>', methods=['GET', 'POST'])
