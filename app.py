@@ -296,6 +296,12 @@ def add_area():
     return render_template('add_area.html')
 
 
+@app.route('/delete_area<area_id>', methods=['GET', 'POST'])
+def delete_area(area_id):
+    area = mongo.db.areas.find_one({'_id': ObjectId(area_id)})
+    return render_template('delete_area.html', area=area)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
