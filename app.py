@@ -271,6 +271,11 @@ def role_required(role_name):
     return decorator
 
 
+@app.errorhandler(403)
+def resource_not_found(e):
+    return render_template('403.html')
+
+
 @app.route('/dashboard')
 @role_required('admin')
 def dashboard():
