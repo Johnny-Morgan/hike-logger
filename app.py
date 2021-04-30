@@ -298,6 +298,10 @@ def add_area():
 
 @app.route('/delete_area<area_id>', methods=['GET', 'POST'])
 def delete_area(area_id):
+    if request.method == 'POST':
+        mongo.db.areas.remove({'_id': ObjectId(area_id)})
+        flash('Area successfully deleted', category='success')
+        return redirect(url_for('dashboard'))
     area = mongo.db.areas.find_one({'_id': ObjectId(area_id)})
     return render_template('delete_area.html', area=area)
 
