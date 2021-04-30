@@ -284,6 +284,12 @@ def dashboard():
     return render_template('dashboard.html', areas=areas, times=times)
 
 
+@app.route('/add_area')
+@role_required('admin')
+def add_area():
+    return render_template('add_area.html')
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
