@@ -284,9 +284,15 @@ def dashboard():
     return render_template('dashboard.html', areas=areas, times=times)
 
 
-@app.route('/add_area')
+@app.route('/add_area', methods=['GET', 'POST'])
 @role_required('admin')
 def add_area():
+    if request.method == 'POST':
+        area = {'name': request.form.get('name')}
+        mongo.db.areas.insert_one(area)
+        flash('Area successfully added', category='success')
+        return redirect(url_for('dashboard'))
+
     return render_template('add_area.html')
 
 
