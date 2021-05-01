@@ -296,6 +296,7 @@ def add_area():
 
 
 @app.route('/edit_area<area_id>', methods=['GET', 'POST'])
+@role_required('admin')
 def edit_area(area_id):
     area = mongo.db.areas.find_one({'_id': ObjectId(area_id)})
     if request.method == 'POST':
@@ -316,6 +317,12 @@ def delete_area(area_id):
         return redirect(url_for('dashboard'))
     area = mongo.db.areas.find_one({'_id': ObjectId(area_id)})
     return render_template('delete_area.html', area=area)
+
+
+@app.route('/add_time', methods=['GET', 'POST'])
+@role_required('admin')
+def add_time():
+    return render_template('add_time.html')
 
 
 if __name__ == '__main__':
