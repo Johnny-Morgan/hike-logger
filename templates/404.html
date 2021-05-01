@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container text-center">
+    <div class="card mx-auto my-5" style="width: 50%;">
+        <div class="card-body">
+            <h5 class="card-title">Error 404</h5>
+            <p class="card-text">Looks like you got lost on a hike!</p>
+            <a href="{{ url_for('get_hikes') }}" class="btn btn-primary">Take me back to the hikes!</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
