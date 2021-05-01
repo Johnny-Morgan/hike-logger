@@ -329,7 +329,13 @@ def add_time():
         return redirect(url_for('dashboard'))
     return render_template('add_time.html')
 
- 
+
+@app.route('/delete_time<time_id>', methods=['GET', 'POST'])
+def delete_time(time_id):
+    time = mongo.db.times.find_one({'_id': ObjectId(time_id)})
+    return render_template('delete_time.html', time=time)
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
