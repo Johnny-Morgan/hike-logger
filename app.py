@@ -335,6 +335,13 @@ def add_time():
 @role_required('admin')
 def edit_time(time_id):
     time = mongo.db.times.find_one({'_id': ObjectId(time_id)})
+    if request.method == 'POST':
+        time = {
+            'time': request.form.get('time')
+        }
+        mongo.db.times.update({'_id': ObjectId(time_id)}, time)
+        flash('Time successfully edited', category='success')
+        return redirect(url_for('dashboard'))
     return render_template('edit_time.html', time=time)
 
 
