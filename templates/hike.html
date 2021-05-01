@@ -21,11 +21,11 @@
                     <h5>Stats:</h5>
                     <hr>
                     <ul>
-                        <li><strong>Area:</strong> {{hike.area}}</li>
-                        <li><strong>Length:</strong> {{hike.length}} km</li>
-                        <li><strong>Time:</strong> {{hike.time}} hours</li>
-                        <li><strong>Added by:</strong> {{hike.added_by}}</li>
-                        <li>
+                        <li><i class="fas fa-mountain"></i> <strong>Area:</strong> {{hike.area}}</li>
+                        <li><i class="fas fa-ruler-horizontal"></i> <strong>Length:</strong> {{hike.length}} km</li>
+                        <li><i class="fas fa-stopwatch"></i> <strong>Time:</strong> {{hike.time}} hours</li>
+                        <li><i class="fas fa-user-edit"></i> <strong>Added by:</strong> {{hike.added_by}}</li>
+                        <li><i class="fas fa-hiking"></i>
                             <strong>Hiked by:</strong>
                             {% for hiker in hikers %}
                             {% if loop.index != loop.length %}
