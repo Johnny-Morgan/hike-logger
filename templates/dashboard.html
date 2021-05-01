@@ -34,13 +34,14 @@
         <h2 class="text-center mb-4">Hike Times</h2>
         <div class="row">
             {% for time in times %}
-            <div class="col-sm-12 col-md-3  mb-3">
+            <div class="col-sm-12 col-md-4 mb-3">
                 <div class="card text-center">
                     <div class="card-header bg-success">
                         <h5 class="card-title">{{time.time}} hours</h5>
                     </div>
                     <div class="card-body bg-light">
-                        <a href="" class="btn btn-sm btn-success">Edit Time</a>
+                        <a href="{{ url_for('edit_time', time_id=time._id)}}" class="btn btn-sm btn-success">Edit
+                            Time</a>
                         <a href="{{ url_for('delete_time', time_id=time._id)}}" class="btn btn-sm btn-danger">Delete
                             Time</a>
                     </div>
