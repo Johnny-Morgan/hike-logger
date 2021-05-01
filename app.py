@@ -322,9 +322,14 @@ def delete_area(area_id):
 @app.route('/add_time', methods=['GET', 'POST'])
 @role_required('admin')
 def add_time():
+    if request.method == 'POST':
+        time = {'time': request.form.get('time')}
+        mongo.db.times.insert_one(time)
+        flash('Time successfully added', category='success')
+        return redirect(url_for('dashboard'))
     return render_template('add_time.html')
 
-
+ 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
