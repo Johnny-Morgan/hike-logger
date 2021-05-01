@@ -276,6 +276,11 @@ def resource_not_found(e):
     return render_template('403.html')
 
 
+@app.errorhandler(404)
+def resource_not_found(e):
+    return render_template('404.html')
+
+
 @app.route('/dashboard')
 @role_required('admin')
 def dashboard():
