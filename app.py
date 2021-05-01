@@ -332,6 +332,10 @@ def add_time():
 
 @app.route('/delete_time<time_id>', methods=['GET', 'POST'])
 def delete_time(time_id):
+    if request.method == 'POST':
+        mongo.db.times.remove({'_id': ObjectId(time_id)})
+        flash('Time successfully deleted', category='success')
+        return redirect(url_for('dashboard'))
     time = mongo.db.times.find_one({'_id': ObjectId(time_id)})
     return render_template('delete_time.html', time=time)
 
