@@ -272,12 +272,12 @@ def role_required(role_name):
 
 
 @app.errorhandler(403)
-def resource_not_found(e):
+def error_403(e):
     return render_template('403.html')
 
 
 @app.errorhandler(404)
-def resource_not_found(e):
+def error_404(e):
     return render_template('404.html')
 
 
