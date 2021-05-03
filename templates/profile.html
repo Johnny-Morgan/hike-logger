@@ -42,34 +42,36 @@
     </div>
     <div class="row">
         <div class="col-sm-12">
-            <div class="table-responsive">
-                <table class="table table-dark table-striped table-bordered">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Name</th>
-                            <th>Length (km)</th>
-                            <th>Time (hours)</th>
-                            <th>Area</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for hike in users_hikes %}
-                        <tr>
-                            <td>
-                                {% if session['user'] %}
-                                <a class="btn btn-sm btn-success"
-                                    href="{{ url_for('hike', hike_id=hike._id) }}">View</a>
-                                {% endif %}
-                            </td>
-                            <td>{{hike.name}}</td>
-                            <td>{{hike.length}}</td>
-                            <td>{{hike.time}}</td>
-                            <td>{{hike.area}}</td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
+            <div class="card p-2 mb-5">
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered" id="hikesTable">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Name</th>
+                                <th>Length (km)</th>
+                                <th>Time (hours)</th>
+                                <th>Area</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for hike in users_hikes %}
+                            <tr>
+                                <td>
+                                    {% if session['user'] %}
+                                    <a class="btn btn-sm btn-success"
+                                        href="{{ url_for('hike', hike_id=hike._id) }}">View</a>
+                                    {% endif %}
+                                </td>
+                                <td>{{hike.name}}</td>
+                                <td>{{hike.length}}</td>
+                                <td>{{hike.time}}</td>
+                                <td>{{hike.area}}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
