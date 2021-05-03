@@ -49,3 +49,9 @@ $('#edit-date-picker').datetimepicker({
     datepicker: true,
     format: 'd-M-Y',
 });
+
+
+// Hikes table
+$(document).ready(function () {
+    $('#hikesTable').DataTable();
+});
