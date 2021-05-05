@@ -8,5 +8,25 @@
         <h4>The pefect place to log and share your hikes</h4>
     </div>
 </section>
-
+<div class="container">
+    <h1 class="text-center mb-5">Latest Hikes</h1>
+    <div class="row">
+        {% for hike in latest_hikes%}
+        <div class="col-sm-12 col-md-3">
+            <div class="card mb-4">
+                <img src="{{hike.img_url}}" class="card-img-top" alt="hike image">
+                <div class="card-body">
+                    <h4 class="card-title">{{hike.name}}</h4>
+                    <p><strong>Added by: </strong> {{hike.added_by}}</p>
+                    {% if session.user %}
+                    <a href="{{ url_for('hike', hike_id=hike._id)}}" class="btn btn-primary">View Hike</a>
+                    {% else %}
+                    <a href="{{ 'login' }}" class="btn btn-primary">Login to view</a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+    </div>
+</div>
 {% endblock %}
