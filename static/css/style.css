@@ -9,16 +9,29 @@
 
 body {
     background-color: var(--gray);
+
+}
+
+/***** NAVBAR *****/
+.nav-item {
+    color: var(--gray);
+    transition-delay: 0.1s;
+}
+
+.nav-item:hover {
+    color: var(--green);
 }
 
 .welcome-msg {
     color: var(--gray);
 }
 
+
 div.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+/***** HOME PAGE *****/
 #hero-image {
     height: 600px;
     width: 100%;
@@ -45,9 +58,12 @@ div.card {
     }
 }
 
-#cover-text,
+#cover-text {
+    color: var(--gray);
+}
+
 #cover-text h2 {
-    color: #FFF;
+    color: var(--brown);
 }
 
 #cover-text {
