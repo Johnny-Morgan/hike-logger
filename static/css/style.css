@@ -1,9 +1,18 @@
+/***** COLORS *****/
+:root {
+    --brown: #543B23;
+    --light-brown: #846954;
+    --gray: #DFDFD4;
+    --light-green: #A5D74D;
+    --green: #81BE1C;
+}
+
 body {
-    background-color: lightgray;
+    background-color: var(--gray);
 }
 
 .welcome-msg {
-    color: #fff;
+    color: var(--gray);
 }
 
 div.card {
@@ -38,7 +47,7 @@ div.card {
 
 #cover-text,
 #cover-text h2 {
-    color: #ffffff;
+    color: #FFF;
 }
 
 #cover-text {
@@ -48,7 +57,7 @@ div.card {
     height: 200px;
     padding-top: 30px;
     padding-left: 10px;
-    background-color: #00ff00;
+    background-color: var(--light-green);
     bottom: 50%;
     left: 75px;
     position: absolute;
