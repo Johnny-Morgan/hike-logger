@@ -36,6 +36,7 @@
     2. Delete a hike that has been added to the website by a user.
     3. Add a new hike category to the website such as new hike areas and times.
    
+
 - ### Wireframes
 
   The wireframes for this project were created using Balsamiq.
@@ -53,3 +54,13 @@
   - [Hike](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/hike.pdf).
 
   - [Add Hike](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/add_hike.pdf).
+
+
+- ### Design
+
+  - #### Colour Scheme
+
+    I used a green with brown colour scheme for this project which I obtained from [schemecolor](https://www.schemecolor.com/green-with-brown-color-combination.php).
+    This palette has 5 colors which are Café Noir (#543B23), Pastel Brown (#846954), White Coffee (#DFDFD4), June Bud (#A5D74D) and Dark Lemon Lime (#81BE1C).
+    
+    ![Image](static/images/palette.png)
