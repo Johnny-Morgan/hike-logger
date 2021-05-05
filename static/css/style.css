@@ -7,9 +7,25 @@
     --green: #81BE1C;
 }
 
+/***** TEXT *****/
+.brown-text {
+    color: var(--brown);
+}
+
+/***** GENERAL *****/
 body {
     background-color: var(--gray);
+}
 
+h1 {
+    color: var(--brown);
+    margin-bottom: 2rem;
+    border-bottom: 5px solid var(--green);
+    display: inline-block;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.8);
 }
 
 /***** NAVBAR *****/

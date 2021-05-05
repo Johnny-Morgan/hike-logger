@@ -9,14 +9,14 @@
     </div>
 </section>
 <div class="container">
-    <h1 class="text-center mb-5">Latest Hikes</h1>
+    <h1 class="text-center">Latest Hikes</h1>
     <div class="row">
         {% for hike in latest_hikes%}
         <div class="col-sm-12 col-md-3">
             <div class="card mb-4">
                 <img src="{{hike.img_url}}" class="card-img-top" alt="hike image">
                 <div class="card-body">
-                    <h4 class="card-title mb-4">{{hike.name}}</h4>
+                    <h4 class="card-title mb-4 brown-text text-shadow">{{hike.name}}</h4>
                     <p><small><i class="fas fa-mountain"></i></small><span class="ml-3">{{hike.area}}</span></p>
                     <p><small><i class="fas fa-stopwatch"></i></small><span class="ml-3">{{hike.time}} hours</span></p>
                     <p class="mb-4"><small><strong>Added by</strong> {{hike.added_by}}</small></p>
