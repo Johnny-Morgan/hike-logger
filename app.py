@@ -360,6 +360,13 @@ def delete_time(time_id):
     return render_template('delete_time.html', time=time)
 
 
+@app.route('/home')
+def home():
+    # get the 4 most recently add hikes form db
+    latest_hikes = list(mongo.db.hikes.find())[-4:]
+    return render_template('home.html', latest_hikes=latest_hikes)
+ 
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
