@@ -59,7 +59,8 @@
                             <tr>
                                 <td>
                                     {% if session['user'] %}
-                                    <a class="button btn-green" href="{{ url_for('hike', hike_id=hike._id) }}">View</a>
+                                    <a class="button button-small btn-green"
+                                        href="{{ url_for('hike', hike_id=hike._id) }}">View</a>
                                     {% endif %}
                                 </td>
                                 <td>{{hike.name}}</td>
