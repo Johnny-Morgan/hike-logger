@@ -145,6 +145,31 @@ div.card {
     background: linear-gradient(to bottom, #fa8383 5%, red 100%);
 }
 
+.outline-green {
+    border: 1px solid var(--green);
+    color: var(--green);
+    text-align: center;
+}
+
+.outline-green:hover {
+    border: 1px solid var(--green);
+    background: linear-gradient(to bottom, var(--light-green) 5%, var(--green) 100%);
+    color: #fff;
+
+}
+
+.outline-red {
+    border: 1px solid red;
+    color: red;
+    text-align: center;
+}
+
+.outline-red:hover {
+    border: 1px solid red;
+    background: linear-gradient(to bottom, #fa8383 5%, red 100%);
+    color: #fff;
+}
+
 /***** GLASS EFFECT *****/
 .glass {
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
