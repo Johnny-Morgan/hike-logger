@@ -173,6 +173,12 @@ div.card {
     }
 }
 
+@media (max-width: 768px) {
+    .hike-image {
+        margin-top: 1rem;
+    }
+}
+
 /**** CARDS *****/
 .card-title {
     font-weight: 600;
