@@ -14,17 +14,34 @@
     color: var(--brown);
 }
 
+.bg-green {
+    background-color: var(--green);
+}
+
+.bg-gray {
+    background-color: var(--gray);
+}
+
+
+
 /***** GENERAL *****/
 body {
     background-color: var(--gray);
+    background-image: url('/static/images/background.jpg');
     font-family: 'Montserrat', sans-serif;
 }
 
 h1 {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
     color: var(--brown);
     margin-bottom: 2rem;
     border-bottom: 5px solid var(--green);
-    display: inline-block;
+}
+
+.header-text {
+    margin-top: 3rem;
 }
 
 .text-shadow {
@@ -44,7 +61,6 @@ h1 {
 .welcome-msg {
     color: var(--gray);
 }
-
 
 div.card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
