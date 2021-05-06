@@ -181,3 +181,7 @@ div.card {
 h3.card-title {
     font-size: 200%;
 }
+
+ul li {
+    margin-top: 8px;
+}
