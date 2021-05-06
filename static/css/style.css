@@ -167,3 +167,12 @@ div.card {
         object-fit: cover;
     }
 }
+
+/**** CARDS *****/
+.card-title {
+    font-weight: 600;
+}
+
+h3.card-title {
+    font-size: 200%;
+}
