@@ -1,36 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h3 class="text-center p-4">Your Profile</h3>
+<h1 class="header-text">Your Profile</h1>
 
 <div class="container">
     <div class="row mb-2">
         <div class="col-sm-12 col-md-4">
-            <div class="card text-center mb-3">
-                <div class="card-header bg-success">
-                    <h5 class="card-title">Total Hikes</h5>
+            <div class="card text-center mb-3 glass">
+                <div class="card-header bg-green brown-text">
+                    <h4 class="card-title">Total Hikes</h4>
                 </div>
-                <div class="card-body bg-light">
+                <div class="card-body">
                     <h3 class="card-title">{{total_hikes}}</h3>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-4">
-            <div class="card text-center mb-3">
-                <div class="card-header bg-success">
-                    <h5 class="card-title">Total Length</h5>
+            <div class="card text-center mb-3 glass">
+                <div class="card-header bg-green brown-text">
+                    <h4 class="card-title">Total Length</h4>
                 </div>
-                <div class="card-body bg-light">
-                    <h3 class="card-title">{{total_hikes_length}} km</h3>
+                <div class="card-body">
+                    <h3 class="card-title">{{"%.2f"|format(total_hikes_length)}} km</h3>
                 </div>
             </div>
         </div>
         <div class="col-sm-12 col-md-4">
-            <div class="card text-center mb-3">
-                <div class="card-header bg-success">
-                    <h5 class="card-title">Average Length</h5>
+            <div class="card text-center mb-3 glass">
+                <div class="card-header bg-green brown-text">
+                    <h4 class="card-title">Average Length</h4>
                 </div>
-                <div class="card-body bg-light">
+                <div class="card-body">
                     {% if total_hikes != 0 %}
                     <h3 class="card-title">{{"%.2f"|format(total_hikes_length / total_hikes)}} km</h3>
                     {% else %}
