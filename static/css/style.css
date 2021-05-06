@@ -141,6 +141,10 @@ div.card {
     background: linear-gradient(to bottom, var(--light-green) 5%, var(--green) 100%);
 }
 
+.btn-red {
+    background: linear-gradient(to bottom, #fa8383 5%, red 100%);
+}
+
 /***** GLASS EFFECT *****/
 .glass {
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
