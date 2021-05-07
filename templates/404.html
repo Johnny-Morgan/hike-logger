@@ -1,12 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<div class="container text-center">
-    <div class="card mx-auto my-5" style="width: 50%;">
-        <div class="card-body">
-            <h5 class="card-title">Error 404</h5>
-            <p class="card-text">Looks like you got lost on a hike!</p>
-            <a href="{{ url_for('get_hikes') }}" class="btn btn-primary">Take me back to the hikes!</a>
+<div class="container text-center my-5">
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Error 404</h3>
+                    <p class="card-text">Looks like you got lost on a hike!</p>
+                    <p>The page you were looking for does not exist.</p>
+                    <a href="{{ url_for('get_hikes') }}" class="btn btn-primary">Take me back to the hikes!</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
