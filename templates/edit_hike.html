@@ -4,13 +4,16 @@
     <div class="card mt-5 login">
         <h5 class="card-header text-white bg-light-brown">Edit Hike</h5>
         <div class="card-body bg-gray">
+            <!-- Edit hike form -->
             <form method="POST" action="{{ url_for('edit_hike', hike_id=hike._id) }}">
                 <div class="form-row">
+                    <!-- Hike name -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="name">Name:</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter hike name"
                             minlength="5" maxlength="30" value="{{hike.name}}" required>
                     </div>
+                    <!-- Hike area -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="area">Area:</label>
                         <select class="form-control" name="area" id="area" required>
@@ -26,12 +29,13 @@
                     </div>
                 </div>
                 <div class="form-row">
+                    <!-- Hike length -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="length">Length (km):</label>
                         <input type="number" class="form-control" name="length" id="length" minlength="1" maxlength="6"
-                            min="1" step=".01" value="{{hike.length}}" required>
-                        <!-- BUG FIX for decimal step="0.1"-->
+                            min="1" step=".01" value="{{hike.length}}" required><!-- BUG FIX for decimal step="0.1"-->
                     </div>
+                    <!-- Hike time -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="time">Time (hours):</label>
                         <select class="form-control" name="time" id="time">
@@ -46,6 +50,7 @@
                         </select>
                     </div>
                 </div>
+                <!-- Hike notes -->
                 <div class="form-row">
                     <div class="form-group col-sm-12">
                         <label for="notes">Hike Notes:</label>
@@ -55,16 +60,19 @@
                     </div>
                 </div>
                 <div class="form-row">
+                    <!-- Hike photo url -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="photo">Photo URL:</label>
                         <input type="url" class="form-control" id="photo" name="photo" value={{hike.img_url}} required>
                     </div>
+                    <!-- Hike date -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="date">Date:</label>
                         <input type="text" class="form-control" id="edit-date-picker" name="date" readonly='true'
                             value={{original_hike_date}} required>
                     </div>
                 </div>
+                <!-- Buttons -->
                 <button type="submit" class="button btn-green">Edit Hike</button>
                 <a class="button btn-red ml-3" href="{{ url_for('hike', hike_id=hike._id) }}">Cancel</a>
             </form>
