@@ -191,7 +191,7 @@ def add_hike():
     return render_template('add_hike.html', areas=areas, times=times)
 
 
-@app.route('/edit_hike<hike_id>', methods=['GET', 'POST'])
+@app.route('/edit_hike/<hike_id>', methods=['GET', 'POST'])
 def edit_hike(hike_id):
     hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
     hikers = hike['hiked_by']
@@ -227,7 +227,7 @@ def edit_hike(hike_id):
     return render_template('edit_hike.html', hike=hike, areas=areas, times=times, original_hike_date=original_hike_date)
 
 
-@app.route('/delete_hike<hike_id>', methods=['GET', 'POST'])
+@app.route('/delete_hike/<hike_id>', methods=['GET', 'POST'])
 def delete_hike(hike_id):
     if request.method == 'POST':
         mongo.db.hikes.remove({'_id': ObjectId(hike_id)})
@@ -307,7 +307,7 @@ def add_area():
     return render_template('add_area.html')
 
 
-@app.route('/edit_area<area_id>', methods=['GET', 'POST'])
+@app.route('/edit_area/<area_id>', methods=['GET', 'POST'])
 @role_required('admin')
 def edit_area(area_id):
     area = mongo.db.areas.find_one({'_id': ObjectId(area_id)})
@@ -321,7 +321,7 @@ def edit_area(area_id):
     return render_template('edit_area.html', area=area)
 
 
-@app.route('/delete_area<area_id>', methods=['GET', 'POST'])
+@app.route('/delete_area/<area_id>', methods=['GET', 'POST'])
 @role_required('admin')
 def delete_area(area_id):
     if request.method == 'POST':
@@ -343,7 +343,7 @@ def add_time():
     return render_template('add_time.html')
 
 
-@app.route('/edit_time<time_id>', methods=['GET', 'POST'])
+@app.route('/edit_time/<time_id>', methods=['GET', 'POST'])
 @role_required('admin')
 def edit_time(time_id):
     time = mongo.db.times.find_one({'_id': ObjectId(time_id)})
@@ -357,7 +357,7 @@ def edit_time(time_id):
     return render_template('edit_time.html', time=time)
 
 
-@app.route('/delete_time<time_id>', methods=['GET', 'POST'])
+@app.route('/delete_time/<time_id>', methods=['GET', 'POST'])
 def delete_time(time_id):
     if request.method == 'POST':
         mongo.db.times.remove({'_id': ObjectId(time_id)})
