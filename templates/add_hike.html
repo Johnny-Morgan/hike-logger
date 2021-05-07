@@ -4,13 +4,16 @@
     <div class="card mt-5">
         <h5 class="card-header text-white bg-light-brown">Add Hike</h5>
         <div class="card-body bg-gray">
+            <!-- Add hike form -->
             <form method="POST" action="">
                 <div class="form-row">
+                    <!-- Hike name -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="name">Name:</label>
                         <input type="text" class="form-control" name="name" id="name" placeholder="Enter hike name"
                             minlength="5" maxlength="30" required>
                     </div>
+                    <!-- Hike area -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="area">Area:</label>
                         <select class="form-control" name="area" id="area" required>
@@ -22,11 +25,13 @@
                     </div>
                 </div>
                 <div class="form-row">
+                    <!-- Hike length -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="length">Length (km):</label>
                         <input type="number" class="form-control" name="length" id="length"
                             placeholder="Enter hike length" minlength="1" maxlength="6" min="1" step=".01" required>
                     </div>
+                    <!-- Hike time -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="time">Time (hours):</label>
                         <select class="form-control" name="time" id="time" required>
@@ -37,6 +42,7 @@
                         </select>
                     </div>
                 </div>
+                <!-- Hike notes -->
                 <div class="form-row">
                     <div class="form-group col-sm-12">
                         <label for="notes">Hike Notes:</label>
@@ -45,16 +51,19 @@
                     </div>
                 </div>
                 <div class="form-row">
+                    <!-- Hike photo url -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="photo">Photo URL:</label>
                         <input type="url" class="form-control" id="photo" name="photo" placeholder="Enter photo url"
                             required>
                     </div>
+                    <!-- Hike date -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="date">Date:</label>
                         <input type="text" class="form-control" id="picker" name="date" readonly='true' required>
                     </div>
                 </div>
+                <!-- Buttons -->
                 <button type="submit" class="button btn-green">Add Hike</button>
                 <a class="button btn-red ml-3" href="{{ url_for('get_hikes') }}">Cancel</a>
             </form>
