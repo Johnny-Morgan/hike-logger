@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<h1 class="header-text">All Hikes</h1>
+<h1 class="header-text glass">All Hikes</h1>
 
 {% if not session['user'] %}
 <h5 class="text-center mb-4">Please <a href="{{ url_for('login') }}">login</a> to view additional hike information</h5>
