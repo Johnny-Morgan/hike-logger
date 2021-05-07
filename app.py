@@ -20,6 +20,13 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
+@app.route('/home')
+def home():
+    # get the 4 most recently add hikes form db
+    latest_hikes = list(mongo.db.hikes.find())[-4:]
+    return render_template('home.html', latest_hikes=latest_hikes)
+
+ 
 @app.route('/get_hikes')
 def get_hikes():
     hikes = mongo.db.hikes.find()
@@ -359,13 +366,6 @@ def delete_time(time_id):
     time = mongo.db.times.find_one({'_id': ObjectId(time_id)})
     return render_template('delete_time.html', time=time)
 
-
-@app.route('/home')
-def home():
-    # get the 4 most recently add hikes form db
-    latest_hikes = list(mongo.db.hikes.find())[-4:]
-    return render_template('home.html', latest_hikes=latest_hikes)
- 
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
