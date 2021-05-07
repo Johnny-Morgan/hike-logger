@@ -26,7 +26,7 @@ def home():
     latest_hikes = list(mongo.db.hikes.find())[-4:]
     return render_template('home.html', latest_hikes=latest_hikes)
 
- 
+
 @app.route('/get_hikes')
 def get_hikes():
     hikes = mongo.db.hikes.find()
@@ -102,7 +102,7 @@ def login():
                 flash('Welcome, {}'.format(
                     request.form.get('username')),
                     category='success')
-                return redirect(url_for('get_hikes'))
+                return redirect(url_for('profile', username=session['user']))
 
             else:
                 # invalid password match
