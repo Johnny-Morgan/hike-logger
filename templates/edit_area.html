@@ -2,7 +2,7 @@
 {% block content %}
 <div class="container">
     <div class="card mt-5 login">
-        <h5 class="card-header text-white bg-dark">Edit Area</h5>
+        <h5 class="card-header text-white bg-light-brown">Edit Area</h5>
         <div class="card-body">
             <form method="POST" action="{{ url_for('edit_area', area_id=area._id) }}">
                 <div class="form-row">
@@ -12,8 +12,8 @@
                             minlength="5" maxlength="15" value="{{area.name}}" required>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-success">Edit Area</button>
-                <a class="btn btn-danger" href="{{ url_for('dashboard') }}">Cancel</a>
+                <button type="submit" class="button btn-green">Edit Area</button>
+                <a class="button btn-red ml-3" href="{{ url_for('dashboard') }}">Cancel</a>
             </form>
         </div>
     </div>
