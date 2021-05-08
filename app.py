@@ -48,10 +48,10 @@ def get_hikes():
     areas = list(mongo.db.areas.find())
     for area in areas:
         hikes_per_area.append({
-            'name': area['name'], 
+            'name': area['name'],
             'num': mongo.db.hikes.find(
                     {'area': area['name']}).count()})
-    
+
     return render_template('hikes.html',
                            hikes=hikes,
                            sum_hike_lengths=sum_hike_lengths,
@@ -96,7 +96,8 @@ def login():
         if existing_user:
             # ensure hashed password matches user input
             if check_password_hash(
-                existing_user['password'], request.form.get('password')):
+                                    existing_user['password'],
+                                    request.form.get('password')):
                 session['user'] = request.form.get('username')
                 flash('Welcome, {}'.format(
                     request.form.get('username')),
@@ -144,11 +145,12 @@ def profile(username):
     total_hikes = len(users_hikes)
 
     if session['user']:
-        return render_template('profile.html',
-                                hikes=hikes,
-                                users_hikes=users_hikes,
-                                total_hikes=total_hikes,
-                                total_hikes_length=total_hikes_length)
+        return render_template(
+                            'profile.html',
+                            hikes=hikes,
+                            users_hikes=users_hikes,
+                            total_hikes=total_hikes,
+                            total_hikes_length=total_hikes_length)
     return redirect(url_for('login'))
 
 
@@ -162,7 +164,11 @@ def hike(hike_id):
             hikers.append(name)
             if name == session['user']:
                 user_hike_date = date
-    return render_template('hike.html', hike=hike, hikers=hikers, user_hike_date=user_hike_date)
+    return render_template(
+                            'hike.html',
+                            hike=hike,
+                            hikers=hikers,
+                            user_hike_date=user_hike_date)
 
 
 @app.route('/add_hike', methods=['GET', 'POST'])
@@ -223,7 +229,12 @@ def edit_hike(hike_id):
     # areas and times required to populate the form
     areas = mongo.db.areas.find().sort('name', 1)
     times = mongo.db.times.find().sort('time', 1)
-    return render_template('edit_hike.html', hike=hike, areas=areas, times=times, original_hike_date=original_hike_date)
+    return render_template(
+                            'edit_hike.html',
+                            hike=hike,
+                            areas=areas,
+                            times=times,
+                            original_hike_date=original_hike_date)
 
 
 @app.route('/delete_hike/<hike_id>', methods=['GET', 'POST'])
@@ -242,7 +253,9 @@ def complete_hike(hike_id):
     if request.method == 'POST':
         mongo.db.hikes.update(
             {'name': hike['name']},
-            {'$push': {'hiked_by': {session['user']: request.form.get('date')}}})
+            {'$push': {
+                        'hiked_by':
+                        {session['user']: request.form.get('date')}}})
         flash('Hike Completed', category='success')
         return redirect(url_for('hike', hike_id=hike['_id']))
     return render_template('complete_hike.html', hike=hike)
