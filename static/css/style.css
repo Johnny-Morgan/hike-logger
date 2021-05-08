@@ -156,6 +156,7 @@ div.card {
     border: 1px solid var(--green);
     color: var(--green);
     text-align: center;
+    margin-top: 0;
 }
 
 .outline-green:hover {
@@ -260,4 +261,16 @@ footer .copyright {
     font-size: 1rem;
     margin: 0.75rem 0 0;
     text-align: center;
+}
+
+#login,
+#register,
+#complete-hike,
+#incomplete-hike {
+    height: 100vh;
+}
+
+#add-hike,
+#edit-hike {
+    margin-bottom: 100px;
 }
