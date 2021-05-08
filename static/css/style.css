@@ -266,7 +266,10 @@ footer .copyright {
 #login,
 #register,
 #complete-hike,
-#incomplete-hike {
+#incomplete-hike,
+#add-area,
+#edit-area,
+#delete-area {
     height: 100vh;
 }
 
