@@ -46,36 +46,18 @@
     </div>
     <!-- Total hikes for each hike area -->
     <div class="row mb-2">
+        {% for data in hikes_per_area %}
         <div class="col-sm-12 col-md-4">
             <div class="card text-center mb-3 glass">
                 <div class="card-header bg-green brown-text">
-                    <h5 class="card-title">Dublin Hikes</h5>
+                    <h5 class="card-title">{{data.name}}</h5>
                 </div>
                 <div class="card-body glass">
-                    <h3 class="card-title">{{dublin_hikes_count}}</h3>
+                    <h3 class="card-title">{{data.num}}</h3>
                 </div>
             </div>
         </div>
-        <div class="col-sm-12 col-md-4">
-            <div class="card text-center mb-3 glass">
-                <div class="card-header bg-green brown-text">
-                    <h5 class="card-title">Wicklow Hikes</h5>
-                </div>
-                <div class="card-body glass">
-                    <h3 class="card-title">{{wicklow_hikes_count}}</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-12 col-md-4">
-            <div class="card text-center mb-3 glass">
-                <div class="card-header bg-green brown-text">
-                    <h5 class="card-title">Kerry Hikes</h5>
-                </div>
-                <div class="card-body glass">
-                    <h3 class="card-title">{{kerry_hikes_count}}</h3>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <!-- Hikes Table -->
     <div class="row">
