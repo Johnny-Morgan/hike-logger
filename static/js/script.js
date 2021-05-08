@@ -55,3 +55,7 @@ $('#edit-date-picker').datetimepicker({
 $(document).ready(function () {
     $('#hikesTable').DataTable();
 });
+
+
+// Copyright - displays current year
+$('#copyright').text(new Date().getFullYear());
