@@ -270,7 +270,8 @@ footer .copyright {
 #add-area,
 #edit-area,
 #delete-area,
-#edit-time {
+#edit-time,
+#delete-time {
     height: 100vh;
 }
 
