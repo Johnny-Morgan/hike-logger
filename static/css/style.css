@@ -269,7 +269,8 @@ footer .copyright {
 #incomplete-hike,
 #add-area,
 #edit-area,
-#delete-area {
+#delete-area,
+#edit-time {
     height: 100vh;
 }
 

@@ -1,20 +1,24 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container">
-    <div class="card mt-5 login">
-        <h5 class="card-header text-white bg-dark">Edit Time</h5>
-        <div class="card-body">
-            <form method="POST" action="{{ url_for('edit_time', time_id=time._id) }}">
-                <div class="form-row">
-                    <div class="form-group col-sm-12 col-md-6">
-                        <label for="time">Time:</label>
-                        <input type="text" class="form-control" name="time" id="time" placeholder="Enter time"
-                            minlength="1" maxlength="5" value="{{time.time}}" required>
-                    </div>
+<div class="container" id="edit-time">
+    <div class="row mt-5">
+        <div class="col-sm-12 col-md-6 offset-md-3">
+            <div class="card mt-5 login">
+                <h5 class="card-header text-white bg-light-brown">Edit Time</h5>
+                <div class="card-body bg-gray">
+                    <form method="POST" action="{{ url_for('edit_time', time_id=time._id) }}">
+                        <div class="form-row">
+                            <div class="form-group col-sm-12">
+                                <label for="time">Time:</label>
+                                <input type="text" class="form-control" name="time" id="time" placeholder="Enter time"
+                                    minlength="1" maxlength="5" value="{{time.time}}" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="button btn-green">Edit Time</button>
+                        <a class="button btn-red ml-3" href="{{ url_for('dashboard') }}">Cancel</a>
+                    </form>
                 </div>
-                <button type="submit" class="btn btn-success">Edit Time</button>
-                <a class="btn btn-danger" href="{{ url_for('dashboard') }}">Cancel</a>
-            </form>
+            </div>
         </div>
     </div>
 </div>
