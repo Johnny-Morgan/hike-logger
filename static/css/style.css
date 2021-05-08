@@ -223,7 +223,7 @@ button:focus {
     }
 }
 
-/**** CARDS *****/
+/***** CARDS *****/
 .card-title {
     font-weight: 600;
 }
@@ -234,4 +234,24 @@ h3.card-title {
 
 ul li {
     margin-top: 8px;
+}
+
+/***** FOOTER *****/
+footer {
+    padding: 15px 0 20px;
+}
+
+footer .list-inline {
+    margin: 0;
+    padding: 0;
+}
+
+footer i {
+    color: var(--light-green);
+    font-size: 150%;
+    padding-left: 0.5rem;
+}
+
+footer i:hover {
+    color: var(--green);
 }
