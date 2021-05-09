@@ -64,3 +64,7 @@
     This palette has 5 colors which are Café Noir (#543B23), Pastel Brown (#846954), White Coffee (#DFDFD4), June Bud (#A5D74D) and Dark Lemon Lime (#81BE1C).
     
     ![Image](static/images/palette.png)
+
+  - #### Typography
+
+    [Montserrat](https://fonts.google.com/specimen/Montserrat) was chosen as the main font for this website with sans-serif as the fallback font.
