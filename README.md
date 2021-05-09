@@ -181,7 +181,7 @@
 
 - [MongoDB](https://www.mongodb.com/)
 
-  - MongoDB is used to store and retrieve the data used in this website
+  - MongoDB is used to store and retrieve the data used in this website.
 
 - [GitPod](https://gitpod.io)
 
@@ -214,3 +214,29 @@
 - [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/)
 
   - Used to generate the table of contents in this document.
+
+### Dependencies
+
+- [click](https://click.palletsprojects.com/en/7.x/)
+
+  - used for creating command line interfaces
+
+- [dnspython](https://www.dnspython.org/)
+
+  - Dnspython is a DNS toolkit for Python.
+
+- [pymongo](https://pypi.org/project/pymongo/)
+
+  - Contains tools for interacting with MongoDB database from python.
+
+- [Flask-PyMongo](https://flask-pymongo.readthedocs.io/en/latest/)
+
+  - Bridges Flask and PyMongo and provides some convenience helpers.
+
+- [itsdangerous](https://readthedocs.org/projects/itsdangerous/)
+
+  - Uses various helpers to pass data to untrusted environments and to get it back safe and sound. Data is cryptographically signed to ensure that a token has not been tampered with.
+
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
+
+  - Werkzeug is a comprehensive WSGI web application library.
