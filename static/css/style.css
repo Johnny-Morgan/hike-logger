@@ -58,13 +58,9 @@ h1 {
 }
 
 /***** NAVBAR *****/
-.nav-item {
-    color: var(--gray);
-    transition-delay: 0.1s;
-}
 
-.nav-item:hover {
-    color: var(--green);
+.nav-link:hover {
+    color: var(--green) !important;
 }
 
 .welcome-msg {
