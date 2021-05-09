@@ -113,3 +113,11 @@
 
   ![Image](static/images/readme/complete1.png)
   ![Image](static/images/readme/complete2.png)
+
+  The user has the option to edit or delete the hike provided they are the user who added the hike to the website. If they did not add the hike, the edit and delete buttons will not be visible to them. Clicking on the 'Edit Hike' button will redirect the user to a new page where a form is displayed with the current hike details.
+
+  ![Image](static/images/readme/edit_hike.png)
+
+  Clicking on the 'Delete Hike' button will redirect the user to a new page to confirm they want to delete the hike.
+
+  ![Image](static/images/readme/delete_hike.png)
