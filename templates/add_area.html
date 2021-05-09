@@ -6,14 +6,17 @@
             <div class="card mt-5">
                 <h5 class="card-header text-white bg-light-brown">Add Area</h5>
                 <div class="card-body bg-gray">
+                    <!-- Add area form -->
                     <form method="POST" action="{{ url_for('add_area') }}">
                         <div class="form-row">
+                            <!-- Area name -->
                             <div class="form-group col-sm-12">
                                 <label for="name">Area Name:</label>
                                 <input type="text" class="form-control" name="name" id="name"
                                     placeholder="Enter area name" minlength="5" maxlength="25" required>
                             </div>
                         </div>
+                        <!-- Buttons -->
                         <button type="submit" class="button btn-green">Add Area</button>
                         <a class="button btn-red ml-3" href="{{ url_for('dashboard') }}">Cancel</a>
                     </form>
