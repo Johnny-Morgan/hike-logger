@@ -4,7 +4,10 @@
 <h1 class="header-text glass">All Hikes</h1>
 
 {% if not session['user'] %}
-<h5 class="text-center mb-4">Please <a href="{{ url_for('login') }}">login</a> to view additional hike information</h5>
+<h1 class="header-text-login glass mb-5">
+    Please <a href="{{ url_for('login') }}">login</a>
+    to view additional hike information
+</h1>
 {% endif %}
 
 <div class="container mb-5">
