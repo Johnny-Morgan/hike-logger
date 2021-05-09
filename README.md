@@ -63,8 +63,31 @@
     I used a green with brown colour scheme for this project which I obtained from [schemecolor](https://www.schemecolor.com/green-with-brown-color-combination.php).
     This palette has 5 colors which are Café Noir (#543B23), Pastel Brown (#846954), White Coffee (#DFDFD4), June Bud (#A5D74D) and Dark Lemon Lime (#81BE1C).
     
-    ![Image](static/images/palette.png)
+    ![Image](static/images/readme/palette.png)
 
   - #### Typography
 
     [Montserrat](https://fonts.google.com/specimen/Montserrat) was chosen as the main font for this website with sans-serif as the fallback font.
+
+## Features
+
+### Existing Features
+
+- ### Home page
+
+  ![Image](static/images/readme/latest.png)
+
+  The homepage shows the last 4 hikes hikes added to the website. For users that are logged in, a button is displayed with the text view. This button redirects the user to a page that displays more information about that hike. For guests to the website, the button is replaced with a login button which redirects the user to the login page. 
+
+
+- ### Hikes page
+
+  ![Image](static/images/readme/hikes_stats.png)
+
+
+  The hikes page shows stats about all the hikes on the site. The stats include total number of hikes, total length of all the hikes combined and the average hike length. It also displays the number of hikes for each area.
+
+
+  ![Image](static/images/readme/hikes_table.png)
+
+  A table is displayed below the hikes which contains all the hikes on the site. The table is responsive, a user can sort the table by clicking on the table headers. This is useful if the user wants to sort the hikes by length or time. A search bar is provided which allows the user to filter the hikes based on their search terms. This feature allows the user to see, for example, only hikes located in the Kerry area.
