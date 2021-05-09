@@ -151,3 +151,66 @@
   Clicking on the 'Delete Hike' button will redirect the user to a new page to confirm they want to delete the hike.
 
   ![Image](static/images/readme/delete_hike.png)
+
+
+## Technologies Used
+
+### Languages Used
+
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+- [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+
+- [JavaScript](https://www.javascript.com/)
+
+- [Python](https://www.python.org/)
+
+### Frameworks, Libraries & Programs Used
+
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+
+  - Flask is the framework used to develop this website.
+
+- [jQuery](https://jquery.com/)
+
+  - jQuery is used to simplify the JavaScript code and DOM manipulation.
+
+- [Bootstrap 4.5](https://getbootstrap.com/)
+
+  - Bootstrap is used to assist with the responsiveness and styling of the website.
+
+- [MongoDB](https://www.mongodb.com/)
+
+  - MongoDB is used to store and retrieve the data used in this website
+
+- [GitPod](https://gitpod.io)
+
+  - GitPod was used as the IDE for this project.
+
+- [Git](https://git-scm.com/)
+
+  - Git is used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+
+- [GitHub](https://github.com/)
+
+  - GitHub is used to store the project's code after being pushed from Git.
+
+- [Balsamiq](https://balsamiq.com/)
+
+  - Balsamiq is used to create the wireframes during the design process.
+
+- [Google Fonts](https://fonts.google.com/)
+
+  - Google Fonts is used to obtain the Montserrat font.
+
+- [Font Awesome](https://fontawesome.com/)
+
+  - Font Awesome is used to obtain the icons used in this website.
+
+- [Autoprefixer](https://autoprefixer.github.io/)
+
+  - Autoprefixer was used to add vendor prefixes.
+
+- [GitHub Wiki TOC generator](https://ecotrust-canada.github.io/markdown-toc/)
+
+  - Used to generate the table of contents in this document.
