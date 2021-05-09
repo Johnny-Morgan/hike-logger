@@ -153,6 +153,22 @@
   ![Image](static/images/readme/delete_hike.png)
 
 
+- ### Add Hike page
+
+  ![Image](static/images/readme/add_hike.png)
+
+  A form is provided for the user to add a hike. The user must add a hike name, area, length, time, hike notes, photo url and a date. If the user does not fill out a section of the form and tries to submit the form, a message is displayed prompting the user to complete the required field. The form can be only be submitted once each field is filled correctly. A dropdown menu is provided for the areas and times. At present the user has three choices to choose from for the area and time. Additional areas and times can be added by an admin account.
+  
+  ![Image](static/images/readme/areas.png)
+  
+  ![Image](static/images/readme/times.png)
+
+
+- ### Dashboard
+
+  ![Image](static/images/readme/admin.jpg)
+
+  The admin dashboard is only accessible by admin users. Here the admin can add, edit or delete hike areas and times. 
 ## Technologies Used
 
 ### Languages Used
@@ -182,6 +198,10 @@
 - [MongoDB](https://www.mongodb.com/)
 
   - MongoDB is used to store and retrieve the data used in this website.
+
+- [Heroku](https://www.heroku.com/home)
+
+  - Heroku is used to deploy this website.
 
 - [GitPod](https://gitpod.io)
 
@@ -219,7 +239,7 @@
 
 - [click](https://click.palletsprojects.com/en/7.x/)
 
-  - used for creating command line interfaces
+  - Used for creating command line interfaces.
 
 - [dnspython](https://www.dnspython.org/)
 
