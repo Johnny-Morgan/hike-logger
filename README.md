@@ -91,3 +91,25 @@
   ![Image](static/images/readme/hikes_table.png)
 
   A table is displayed below the hikes which contains all the hikes on the site. The table is responsive, a user can sort the table by clicking on the table headers. This is useful if the user wants to sort the hikes by length or time. A search bar is provided which allows the user to filter the hikes based on their search terms. This feature allows the user to see, for example, only hikes located in the Kerry area.
+
+
+- ### Profile page
+
+  ![Image](static/images/readme/profile.png)
+
+  The profile page is similar to the hikes pages with the difference being that the profile page show the stats and hikes relevant to the logged in user.
+
+
+- ### Hike page
+
+  ![Image](static/images/readme/hike.png)
+
+  Each hike on the site has its own page which displays the name, notes, stats and a picture of the hike. The stats section has a feature which displays all the registered users that have completed the hike. Below the stats card there is a card that displays the date that the logged in user completed the hike. The user can mark the hike as incomplete if they wish to do so.
+
+  ![Image](static/images/readme/incomplete1.png)
+  ![Image](static/images/readme/incomplete2.png)
+
+  If they have not completed the hike they have the option to do so by clicking on the complete button. This will redirect the user to a new page where they can choose a date for when they completed the hike. Marking a hike as complete will add the users name to the 'hiked by' list in the stats section. Marking a hike as incomplete will remove them from the list. 
+
+  ![Image](static/images/readme/complete1.png)
+  ![Image](static/images/readme/complete2.png)
