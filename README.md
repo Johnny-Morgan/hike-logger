@@ -73,6 +73,36 @@
 
 ### Existing Features
 
+- ### Sitewide features
+
+  - Responsive Bootstrap Navigation bar
+
+    The links in the navigation bar change depending on the type of user visitng the site. For a guest or a user not logged in, the navbar displays links to the home page as well as the login and register pages. 
+
+    ![Image](static/images/readme/navbar1.png)
+
+     For a logged in user, the navbar displays links to the home page, hikes page, profile page, add a hike page and the logout page. A welcome message is displayed with user's name.
+
+    ![Image](static/images/readme/navbar2.png)
+
+    For an admin, a link to the admin dashboard is displayed.
+
+    ![Image](static/images/readme/navbar3.png)
+
+    The navigation is fully responsive with a hamburger icon and dropdown menu a feature for mobile devices.
+
+    ![Image](static/images/readme/navbar4.png)
+
+
+  - Footer with social media links.
+
+  - Flash messages are featured across the site for when a user performs certain actions such as editing or deleting a hike.
+
+  - Custom Error 403 page for if a non-admin user attempts to access the admin dashboard page.
+
+  - Custom Error 404 page for if a user tries to open a page that does not exist.
+
+
 - ### Home page
 
   ![Image](static/images/readme/latest.png)
