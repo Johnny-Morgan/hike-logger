@@ -3,17 +3,21 @@
 <h1 class="header-text glass">{{hike.name}}</h1>
 
 <div class="container" id="complete-hike">
-    <div class="card mt-5">
-        <h5 class="card-header text-white bg-light-brown">Mark this hike as completed?</h5>
-        <div class="card-body bg-gray">
-            <form method="POST" action="{{ url_for('complete_hike', hike_id=hike._id) }}">
-                <div class="form-group col-sm-12 col-md-6">
-                    <label for="date">Date:</label>
-                    <input type="text" class="form-control" id="picker" name="date" readonly='true' required>
+    <div class="row">
+        <div class="col-sm-12 col-md-6 offset-md-3">
+            <div class="card mt-5">
+                <h5 class="card-header text-white bg-light-brown">Mark this hike as completed?</h5>
+                <div class="card-body bg-gray">
+                    <form method="POST" action="{{ url_for('complete_hike', hike_id=hike._id) }}">
+                        <div class="form-group col-sm-12">
+                            <label for="date">Date:</label>
+                            <input type="text" class="form-control" id="picker" name="date" readonly='true' required>
+                        </div>
+                        <button type="submit" class="button btn-green ml-3">Yes</button>
+                        <a class="button btn-red ml-3" href="{{ url_for('hike', hike_id=hike._id) }}">Cancel</a>
+                    </form>
                 </div>
-                <button type="submit" class="button btn-green ml-3">Yes</button>
-                <a class="button btn-red ml-3" href="{{ url_for('hike', hike_id=hike._id) }}">Cancel</a>
-            </form>
+            </div>
         </div>
     </div>
 </div>
