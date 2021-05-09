@@ -37,8 +37,7 @@ body {
     height: 100vh;
 }
 
-h1,
-h2 {
+h1 {
     width: 400px;
     margin: 0 auto;
     text-align: center;
@@ -59,7 +58,6 @@ h2 {
 }
 
 /***** NAVBAR *****/
-
 .nav-link:hover {
     color: var(--green) !important;
 }
@@ -133,7 +131,6 @@ div.card {
 
 .button-small {
     font-size: .75rem;
-    /* padding: 0.5em 1em; */
 }
 
 .button:hover {
@@ -160,7 +157,6 @@ div.card {
     border: 1px solid var(--green);
     background: linear-gradient(to bottom, var(--light-green) 5%, var(--green) 100%);
     color: #fff;
-
 }
 
 .outline-red {
@@ -305,5 +301,10 @@ footer .copyright {
 
     #cover-text h4 {
         font-size: 125%;
+    }
+
+    #login,
+    #register {
+        margin-bottom: 200px;
     }
 }
