@@ -303,13 +303,4 @@ footer .copyright {
     #cover-text h4 {
         font-size: 125%;
     }
-
-    #login,
-    #register {
-        margin-bottom: 200px;
-    }
-
-    #footer {
-        margin-top: 5rem;
-    }
 }
