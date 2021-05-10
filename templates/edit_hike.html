@@ -32,8 +32,8 @@
                     <!-- Hike length -->
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="length">Length (km):</label>
-                        <input type="number" class="form-control" name="length" id="length" minlength="1" maxlength="6"
-                            min="1" step=".01" value="{{hike.length}}" required><!-- BUG FIX for decimal step="0.1"-->
+                        <input type="number" class="form-control" name="length" id="length" min="1" step=".01"
+                            value="{{hike.length}}" required>
                     </div>
                     <!-- Hike time -->
                     <div class="form-group col-sm-12 col-md-6">
@@ -67,8 +67,8 @@
                     </div>
                     <!-- Hike date -->
                     <div class="form-group col-sm-12 col-md-6">
-                        <label for="date">Date:</label>
-                        <input type="text" class="form-control" id="edit-date-picker" name="date" readonly='true'
+                        <label for="edit-date-picker">Date:</label>
+                        <input type="text" class="form-control" id="edit-date-picker" name="date" readonly='readonly'
                             value={{original_hike_date}} required>
                     </div>
                 </div>
