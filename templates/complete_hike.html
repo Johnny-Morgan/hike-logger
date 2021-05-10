@@ -10,8 +10,9 @@
                 <div class="card-body bg-gray">
                     <form method="POST" action="{{ url_for('complete_hike', hike_id=hike._id) }}">
                         <div class="form-group col-sm-12">
-                            <label for="date">Date:</label>
-                            <input type="text" class="form-control" id="picker" name="date" readonly='true' required>
+                            <label for="picker">Date:</label>
+                            <input type="text" class="form-control" id="picker" name="date" readonly='readonly'
+                                required>
                         </div>
                         <button type="submit" class="button btn-green ml-3">Yes</button>
                         <a class="button btn-red ml-3" href="{{ url_for('hike', hike_id=hike._id) }}">Cancel</a>
