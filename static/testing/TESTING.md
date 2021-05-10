@@ -65,3 +65,13 @@ The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
     
 ![Image](images/css_validator.png)
 
+### JavaScript
+
+[JSHint](https://jshint.com/) was used to validate the JavaScript code of the project.
+
+- Four warnings for 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). These warnings can be safley ignored.
+
+- The jQuery $ symbols are declared as undefined variables. This can be safely ignored.
+
+![Image](images/jshint.png)
+
