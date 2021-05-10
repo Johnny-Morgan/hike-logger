@@ -87,7 +87,8 @@ h1 a:hover {
 }
 
 /***** NAVBAR *****/
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
     color: var(--green) !important;
 }
 

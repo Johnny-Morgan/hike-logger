@@ -39,19 +39,26 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link mr-3" href="{{ url_for('home') }}">Home</a>
+                    <a class="nav-item nav-link mr-3 {{'active' if active_page == 'home'}}"
+                        href="{{ url_for('home') }}">Home</a>
                     {% if session['user'] %}
-                    <a class="nav-item nav-link mr-3" href="{{ url_for('get_hikes') }}">Hikes</a>
-                    <a class="nav-item nav-link mr-3" href="{{ url_for('profile', username=session['user']) }}">My
+                    <a class="nav-item nav-link mr-3 {{'active' if active_page == 'hikes'}}"
+                        href="{{ url_for('get_hikes') }}">Hikes</a>
+                    <a class="nav-item nav-link mr-3 {{'active' if active_page == 'profile'}}"
+                        href="{{ url_for('profile', username=session['user']) }}">My
                         Profile</a>
-                    <a class="nav-item nav-link mr-3" href="{{ url_for('add_hike') }}">Add Hike</a>
+                    <a class="nav-item nav-link mr-3 {{'active' if active_page == 'add_hike'}}"
+                        href="{{ url_for('add_hike') }}">Add Hike</a>
                     {% if session.user == 'admin' %}
-                    <a class="nav-item nav-link mr-3" href="{{ url_for('dashboard') }}">Dashboard</a>
+                    <a class="nav-item nav-link mr-3 {{'active' if active_page == 'dashboard'}}"
+                        href="{{ url_for('dashboard') }}">Dashboard</a>
                     {% endif %}
                     <a class="nav-item nav-link mr-3" href="{{ url_for('logout') }}">Logout</a>
                     {% else %}
-                    <a class="nav-item nav-link mr-3" href="{{ url_for('login') }}">Login</a>
-                    <a class="nav-item nav-link mr-3" href="{{ url_for('register') }}">Register</a>
+                    <a class="nav-item nav-link mr-3 {{'active' if active_page == 'login'}}"
+                        href="{{ url_for('login') }}">Login</a>
+                    <a class="nav-item nav-link mr-3 {{'active' if active_page == 'register'}}"
+                        href="{{ url_for('register') }}">Register</a>
                     {% endif %}
                 </div>
             </div>
@@ -67,7 +74,7 @@
         <div class="text-center alert alert-{{ category }} alert-dismissible fade show" role="alert">
             <span>{{ message }}</span>
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times</span>
+                <span aria-hidden="true">&times;</span>
             </button>
         </div>
         {% endfor %}

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% set active_page = 'login' %}
 {% block content %}
 <div class="container">
     <div class="row mt-5">
@@ -19,7 +20,7 @@
                             <label for="password">Password</label>
                             <input type="password" class="form-control" name="password" id="password"
                                 placeholder="Enter Password" minlength="8" pattern="^[a-zA-Z0-9]{8,15}$" maxlength="15"
-                                aria-describedby="passwordHelpBlock" required>
+                                required>
                         </div>
                         <!-- Login -->
                         <button type="submit" class="button btn-green">Login</button>

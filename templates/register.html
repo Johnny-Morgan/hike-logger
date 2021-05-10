@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% set active_page = 'register' %}
 {% block content %}
 <div class="container">
     <div class="row mt-5">
@@ -23,8 +24,7 @@
                             <label for="password">Password</label>
                             <input type="password" class="form-control" name="password" id="password"
                                 placeholder="Enter Password" minlength="8"
-                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" maxlength="15"
-                                aria-describedby="passwordHelpBlock" required>
+                                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,15}" maxlength="15" required>
                             <div class="invalid-feedback">
                                 Your password must contain at least one number, one uppercase letter, one lowercase
                                 letter, and be 8-15 characters long.

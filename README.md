@@ -283,6 +283,8 @@ The testing data for this project can be found in a separate file called [TESTIN
 
 - The jQuery plugin to create the date picker was taken from [xdsoft](https://xdsoft.net/jqplugins/datetimepicker/).
 
+- The code to dynamically set the active class for the navigation links was taken from [stackoverflow](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621).
+
 ### Media
 
 - The background image is taken from [wikipedia](https://en.wikipedia.org/wiki/Wicklow_Way#/media/File:J_B_Malone_Memorial.jpg).
