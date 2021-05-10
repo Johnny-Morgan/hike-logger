@@ -10,7 +10,7 @@
         <h2 class="text-center mb-4">Hike Areas</h2>
         <div class="row">
             {% for area in areas %}
-            <div class="col-sm-12 col-md-4 mb-3">
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
                 <div class="card text-center">
                     <div class="card-header bg-green">
                         <h5 class="card-title">{{area.name}}</h5>
@@ -20,8 +20,7 @@
                         <a href="{{ url_for('edit_area', area_id=area._id)}}" class="button button-small btn-green">Edit
                             Area</a>
                         <a href="{{ url_for('delete_area', area_id=area._id)}}"
-                            class="button button-small btn-red ml-3">Delete
-                            Area</a>
+                            class="button button-small btn-red ml-3">Delete</a>
                     </div>
                 </div>
             </div>
@@ -39,7 +38,7 @@
         <h2 class="text-center mb-4">Hike Times</h2>
         <div class="row">
             {% for time in times %}
-            <div class="col-sm-12 col-md-4 mb-3">
+            <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
                 <div class="card text-center">
                     <div class="card-header bg-green">
                         <h5 class="card-title">{{time.time}} hours</h5>
@@ -49,8 +48,7 @@
                         <a href="{{ url_for('edit_time', time_id=time._id)}}" class="button button-small btn-green">Edit
                             Time</a>
                         <a href="{{ url_for('delete_time', time_id=time._id)}}"
-                            class="button button-small btn-red ml-3">Delete
-                            Time</a>
+                            class="button button-small btn-red ml-3">Delete</a>
                     </div>
                 </div>
             </div>
