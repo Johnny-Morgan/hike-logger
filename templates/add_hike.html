@@ -5,7 +5,7 @@
         <h5 class="card-header text-white bg-light-brown">Add Hike</h5>
         <div class="card-body bg-gray">
             <!-- Add hike form -->
-            <form method="POST" action="">
+            <form method="POST" action="{{ url_for('add_hike') }}">
                 <div class="form-row">
                     <!-- Hike name -->
                     <div class="form-group col-sm-12 col-md-6">
@@ -29,7 +29,7 @@
                     <div class="form-group col-sm-12 col-md-6">
                         <label for="length">Length (km):</label>
                         <input type="number" class="form-control" name="length" id="length"
-                            placeholder="Enter hike length" minlength="1" maxlength="6" min="1" step=".01" required>
+                            placeholder="Enter hike length" min="1" step=".01" required>
                     </div>
                     <!-- Hike time -->
                     <div class="form-group col-sm-12 col-md-6">
@@ -59,8 +59,8 @@
                     </div>
                     <!-- Hike date -->
                     <div class="form-group col-sm-12 col-md-6">
-                        <label for="date">Date:</label>
-                        <input type="text" class="form-control" id="picker" name="date" readonly='true' required>
+                        <label for="picker">Date:</label>
+                        <input type="text" class="form-control" id="picker" name="date" readonly="readonly" required>
                     </div>
                 </div>
                 <!-- Buttons -->
