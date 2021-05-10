@@ -267,10 +267,6 @@ footer .copyright {
     text-align: center;
 }
 
-#error {
-    padding-top: 100px;
-}
-
 /***** MEDIA QUERIES *****/
 @media (min-width: 768px) {
     .card-img-top {
