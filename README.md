@@ -280,3 +280,9 @@
 - The [DataTables](https://cdn.datatables.net/) CDN was used to build the hike tables.
 
 - The jQuery plugin to create the date picker was taken from [xdsoft](https://xdsoft.net/jqplugins/datetimepicker/).
+
+### Media
+
+- The background image is taken from [wikipedia](https://en.wikipedia.org/wiki/Wicklow_Way#/media/File:J_B_Malone_Memorial.jpg).
+
+- The site logo and favicon is from [flaticon](https://www.flaticon.com/free-icon/mountains_762437?term=mountain&page=1&position=18&page=1&position=18&related_id=762437&origin=search).
