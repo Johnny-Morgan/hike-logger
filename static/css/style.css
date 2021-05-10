@@ -267,26 +267,6 @@ footer .copyright {
     text-align: center;
 }
 
-#login,
-#register,
-#complete-hike,
-#incomplete-hike,
-#delete-hike,
-#add-area,
-#edit-area,
-#delete-area,
-#add-time,
-#edit-time,
-#delete-time,
-#error {
-    height: 100vh;
-}
-
-#add-hike,
-#edit-hike {
-    margin-bottom: 100px;
-}
-
 #error {
     padding-top: 100px;
 }
