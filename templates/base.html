@@ -76,37 +76,40 @@
     </section>
     <!-- End Flash Messages -->
 
-    {% block content %}
-    {% endblock %}
-
-    <!-- Footer -->
-    <footer class="bg-dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 mx-auto">
-                    <ul class="list-inline text-center">
-                        <li class="list-inline-item">
-                            <a href="https://www.instagram.com/" target="_blank">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.facebook.com/" target="_blank">
-                                <i class="fab fa-facebook"></i>
-                            </a>
-                        </li>
-                        <li class="list-inline-item">
-                            <a href="https://www.youtube.com/" target="_blank">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-light">Copyright &copy; John Morgan <span id="copyright"></span></p>
+    <div id="page-container">
+        <div id="content-wrap">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <!-- Footer -->
+        <footer class="bg-dark" id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-10 mx-auto">
+                        <ul class="list-inline text-center">
+                            <li class="list-inline-item">
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.facebook.com/" target="_blank">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.youtube.com/" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <p class="copyright text-light">Copyright &copy; John Morgan <span id="copyright"></span></p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </footer>
-    <!-- End Footer -->
+        </footer>
+        <!-- End Footer -->
+    </div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
