@@ -81,3 +81,22 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 ![Image](images/python_checker.png)
 
+## Testing User Stories
+
+- As a **guest**, I want to be able to:
+
+    1. *View the latest hikes that have been added to the website.*
+
+        The homepage contains the last four hikes to be added to the website. Each hike has a button with the text 'Login to view' which when clicked, redirects the guest to the login page. 
+        
+        ![Image](images/latest_hikes.png)
+
+    2. *Register an account with the site so I can have the ability to view all of the hikes on the site and add my own.*
+
+        A registration page is provided where a guest can register a new account. A registered user can then login and view all the hikes on the site. 
+
+        ![Image](images/register.png)
+
+        A registered user that is logged in can then access the functionality to add a hike to the site.
+
+        ![Image](images/add_hike.png)
