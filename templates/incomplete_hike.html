@@ -5,12 +5,12 @@
 <div class="container" id="incomplete-hike">
     <div class="row">
         <div class="col-sm-12 col-md-6 offset-md-3">
-            <div class="card mt-5 login">
+            <div class="card my-5 login">
                 <h5 class="card-header text-white bg-light-brown">Mark this hike as incomplete?</h5>
                 <div class="card-body bg-gray">
                     <form method="POST" action="{{ url_for('incomplete_hike', hike_id=hike._id) }}">
                         <button type="submit" class="button btn-green">Yes</button>
-                        <a class="button btn-red" href="{{ url_for('hike', hike_id=hike._id) }}">Cancel</a>
+                        <a class="button btn-red ml-3" href="{{ url_for('hike', hike_id=hike._id) }}">Cancel</a>
                     </form>
                 </div>
             </div>
