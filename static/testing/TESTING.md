@@ -1,5 +1,29 @@
 ## Validation
 
+### HTML
+
+The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service was used to validate the HTML code of this project.
+
+- add_hike.html template errors:
+
+    - Bad value for attribute action on element form: Must be non-empty. This error was resolved by completing the action attribute: 
+
+        ``` html 
+        action = "{{ url_for('add_hike') }}"
+        ``` 
+    - The input type number is not allowed the attributes minlength and maxlength. This error was resolved by removing these attributes.
+
+    - Bad value true for attribute readonly on element input. This was resolved by changing the readonly attribute value to "readonly":
+
+        ``` html 
+        readonly="readonly"
+        ``` 
+    - The value of the for attribute of the label element must be the ID of a non-hidden form control. Resolved by changing the value of the for attribute to "picker":
+
+        ``` html 
+        <label for="picker">Date:</label>
+        ``` 
+
 ### CSS
 
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) service was used to validate the CSS code.
