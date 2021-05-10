@@ -263,7 +263,9 @@
 
   - Werkzeug is a comprehensive WSGI web application library.
 
+## Testing
 
+The testing data for this project can be found in a separate file called [TESTING.md](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/testing/TESTING.md).
 
 ## Credits
 
