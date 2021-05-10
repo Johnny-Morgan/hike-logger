@@ -235,6 +235,9 @@ button:focus {
 }
 
 /***** GLASS EFFECT *****/
+/* 
+    CREDIT - https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535 
+*/
 .glass {
     -webkit-box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
@@ -275,12 +278,9 @@ ul li {
 }
 
 /***** FOOTER *****/
-footer {
-    padding: 1rem 0;
-}
-
 #footer {
     position: absolute;
+    padding: 1rem 0;
     bottom: 0;
     width: 100%;
     height: 6rem;

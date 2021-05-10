@@ -120,7 +120,7 @@
 
   ![Image](static/images/readme/hikes_table.png)
 
-  A table is displayed below the hikes which contains all the hikes on the site. The table is responsive, a user can sort the table by clicking on the table headers. This is useful if the user wants to sort the hikes by length or time. A search bar is provided which allows the user to filter the hikes based on their search terms. This feature allows the user to see, for example, only hikes located in the Kerry area.
+  A table is displayed below the hike stats which contains all the hikes on the site. The table is responsive, a user can sort the table by clicking on the table headers. This is useful if the user wants to sort the hikes by length or time. A search bar is provided which allows the user to filter the hikes based on their search terms. This feature allows the user to see, for example, only hikes located in the Kerry area.
 
 
 - ### Profile page
@@ -191,6 +191,8 @@
 
   - jQuery is used to simplify the JavaScript code and DOM manipulation.
 
+  - It is also used for generating the data tables and date picker.
+
 - [Bootstrap 4.5](https://getbootstrap.com/)
 
   - Bootstrap is used to assist with the responsiveness and styling of the website.
@@ -260,3 +262,21 @@
 - [Werkzeug](https://werkzeug.palletsprojects.com/en/1.0.x/)
 
   - Werkzeug is a comprehensive WSGI web application library.
+
+
+
+## Credits
+
+### Code
+
+- The glass effect was taken from [envatatotuts+](https://webdesign.tutsplus.com/tutorials/how-to-create-a-frosted-glass-effect-in-css--cms-32535).
+
+- The password field regex pattern was taken [w3schools](https://www.w3schools.com/tags/tryit.asp?filename=tryhtml5_input_pattern3).
+
+- The layout to control the position of the footer was taken from [freecodecamp](https://www.freecodecamp.org/news/how-to-keep-your-footer-where-it-belongs-59c6aa05c59c/).
+
+- The code for the home page hero section was taken from the Code Institute [Love Running](https://www.youtube.com/watch?v=zI349F1o0YM&t=46s&ab_channel=MediaUpload) project.
+
+- The [DataTables](https://cdn.datatables.net/) CDN was used to build the hike tables.
+
+- The jQuery plugin to create the date picker was taken from [xdsoft](https://xdsoft.net/jqplugins/datetimepicker/).
