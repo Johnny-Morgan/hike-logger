@@ -4,7 +4,7 @@
 
 The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service was used to validate the HTML code of this project.
 
-- add_hike.html template errors:
+- [add_hike.html](https://github.com/Johnny-Morgan/hike-logger/blob/master/templates/add_hike.html) template errors:
 
     - *Bad value for attribute action on element form: Must be non-empty.* This error was resolved by completing the action attribute: 
 
@@ -24,7 +24,7 @@ The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service 
         <label for="picker">Date:</label>
         ``` 
 
-- complete_hike.html template errors:
+- [complete_hike.html](https://github.com/Johnny-Morgan/hike-logger/blob/master/templates/complete_hike.html) template errors:
 
     - *Bad value true for attribute readonly on element input.* This was resolved by changing the readonly attribute value to "readonly":
 
@@ -37,7 +37,7 @@ The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service 
         <label for="picker">Date:</label>
         ``` 
     
-- edit_hike.html template errors:
+- [edit_hike.html](https://github.com/Johnny-Morgan/hike-logger/blob/master/templates/edit_hike.html) template errors:
 
     - *The input type number is not allowed the attributes minlength and maxlength.* This error was resolved by removing these attributes.
 
@@ -74,4 +74,10 @@ The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
 - The jQuery $ symbols are declared as undefined variables. This can be safely ignored.
 
 ![Image](images/jshint.png)
+
+### Python
+
+The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax checker was used to check the Python code syntax, and find any errors. The code passed with no errors.
+
+![Image](images/python_checker.png)
 
