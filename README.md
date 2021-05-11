@@ -287,6 +287,8 @@ The testing data for this project can be found in a separate file called [TESTIN
 
 ### Media
 
+- The home page hero image is taken from [goworldtravel](https://www.goworldtravel.com/hiking-in-patagonia/).
+
 - The background image is taken from [wikipedia](https://en.wikipedia.org/wiki/Wicklow_Way#/media/File:J_B_Malone_Memorial.jpg).
 
 - The site logo and favicon is from [flaticon](https://www.flaticon.com/free-icon/mountains_762437?term=mountain&page=1&position=18&page=1&position=18&related_id=762437&origin=search).
