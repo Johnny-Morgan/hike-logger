@@ -100,3 +100,76 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
         A registered user that is logged in can then access the functionality to add a hike to the site.
 
         ![Image](images/add_hike.png)
+
+-  As a **registered user**, I want to be able to:
+ 
+    1. *Login to my account so I can create a new hike.*
+
+        A login page is provided where a user enters their username and password to access the full website where they can add a new hike.
+
+        ![Image](images/login.png)
+
+    2. *By creating a new hike, I want to be able to:*
+        1. Give the hike a name.
+        2. Add the hike area.
+        3. Add the hike length.
+        4. Add the approximate time it takes to complete the hike.
+        5. Add some notes about the hike.
+        6. Add a photo of the hike.
+        7. Add the date I completed the hike.
+
+        A form is provided for a user to add a hike. 
+        - The hike name is inputted using a text field.
+        - The hike area is chosen from a dropdwon menu.
+        - The hike length is inputed using a number field. 
+        - The hike time is chosen from a dropdwon menu.
+        - The hike notes are inputed using a textarea field.
+        - A url input is provided to add a link to a photo.
+        - The hike date is chosen from a datepicker.
+
+    3. *View all the hikes I have completed in a table that I can sort based on the hike length or time to complete.*
+
+        A table is provided that shows each hike the user has completed and displays the hike name, length, time to complete and area. Clicking on the header of the length column will sort the hikes by length. Clicking on the time column will sort the hikes by their time. A user can also sort by the hike area or by the hike name should they wish to do so.
+
+        ![Image](images/table.png)
+        
+    4. *Search the table of hikes so I can filter the hikes based on the search terms.*
+        
+        The table of hikes contains a search bar where the user can search the table of hikes which will then be filtered based on the search results.
+
+        ![Image](images/search_table.png)
+
+    5. *View each hike on a seperate page which shows all the information on the hike.*
+
+        There is a button displayed beside each hike in the table that redirects the user to a separate page that displays all the hike information including the hike photo and other users who have completed the hike.
+
+        ![Image](images/hike.png)
+
+    6. *Update the information of a hike I have added to the website.*
+
+        By clicking on the 'Edit Hike' button, a user can edit the details of the hike. Note that the user can only edit the hikes that they have added to the site. They cannot edit hikes that have been uploaded by other users.
+
+        ![Image](images/edit_hike.png)
+
+    7. *Delete a hike that I have added.*
+
+        By clicking on the 'Delete Hike' button, a user can delete the hike from the site. Note again that the user can only delete the hikes that they have added to the site. They cannot delete hikes that have been uploaded by other users.
+
+        ![Image](images/delete_hike.png)
+
+    8. *View statistics about my hikes such as the total amount of hikes I have completed and the average length of all my hikes.*
+
+        Each user has a profile page that displays the number of hikes they have completed, the total length of all the hikes they have completed and the average length of each hike.
+
+        ![Image](images/my_stats.png)
+
+    9. *View all the hikes on the website that other users have added and be able to search and filter these hikes.*
+
+        There is a table in the 'Hikes' page which contains all the hikes that have been added to the site. The table can be sorted by clicking on the table headers and can be searched using the search bar.
+
+    10. *Have the opportunity to mark hikes that other users have added as completed and add them to the list of my completed hikes.*
+
+        On the page for each hike there is a 'complete' button that a user can click. This allows the user to mark the hike as complete and they can add the date they completed the hike. The hike is then added to the table in their profile page.
+        
+        ![Image](../images/readme/complete1.png)
+        ![Image](../images/readme/complete2.png)
