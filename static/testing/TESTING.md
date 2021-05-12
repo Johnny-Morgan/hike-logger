@@ -193,3 +193,22 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
         The dashboard provides full CRUD functionality for the admin allowinbg them to create, view, edit and delete hike areas and times.
 
         ![Image](images/admin_dashboard.png)
+
+## Manual Testing on Live Site
+
+Navigation
+
+- Checked the relevant navigation links were visible to a guest, a logged in user and an admin user.
+
+- Checked all navigation links from the menu to confirm that they direct to correct pages.
+
+Registration page
+
+- Attempted to register with a username that did not meet the relevent criteria to confirm that the correct warning message was displayed.
+
+- Attempted to register with a password that did not meet the relevent criteria to confirm that the correct warning message was dispalyed.
+
+- Registered as a new user and confirmed that the user was redirected to the hikes page and the correct flash message was displayed.
+
+- Checked that the login link redirects to the login page.
+
