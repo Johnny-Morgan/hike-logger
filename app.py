@@ -1,4 +1,5 @@
 import os
+import logging
 from functools import wraps
 from flask import (
     Flask, flash, render_template,
@@ -22,7 +23,7 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/home')
 def home():
-    # get the 4 most recently add hikes form db
+    # get the 4 most recently added hikes from the db
     latest_hikes = list(mongo.db.hikes.find())[-4:]
     return render_template('home.html', latest_hikes=latest_hikes)
 
@@ -130,7 +131,8 @@ def profile(username):
 
     '''loop through all hikes in db,
     all hikes that the user has hiked
-    are appended to users_hikes array'''
+    are appended to users_hikes array
+    '''
     users_hikes = []
     total_hikes_length = 0
 
@@ -278,12 +280,23 @@ def incomplete_hike(hike_id):
     return render_template('incomplete_hike.html', hike=hike)
 
 
-# CREDIT - https://stackoverflow.com/questions/25233188/what-is-the-best-way-to-protect-a-flask-endpoint
 def role_required(role_name):
+    '''
+    Checks if the current user is an admin or not.
+    Throws a 403 error if not an admin.
+    Throws a 403 error if not logged in.
+    '''
     def decorator(func):
         @wraps(func)
         def authorize(*args, **kwargs):
-            if session['user'] != 'admin':
+            logged_in = True
+            try:
+                if session['user'] != 'admin':
+                    abort(403)
+            except Exception as e:
+                logging.info(e)
+                logged_in = False
+            if not logged_in:
                 abort(403)
             return func(*args, **kwargs)
         return authorize
