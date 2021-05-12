@@ -10,6 +10,7 @@
     - [**Python**](#python)
 3. [**Testing User Stories**](#testing-user-stories)
 4. [**Manual Testing on Live Site**](#manual-testing-on-live-site)
+5. [**Bugs Discovered**](#bugs-discovered)
 
 ## Testing Overview
 
@@ -371,3 +372,71 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 - Confirmed all CRUD functionality for adding, editing and deleting a hike area was working correctly.
 
 - Confirmed all CRUD functionality for adding, editing and deleting a hike time was working correctly.
+
+## Bugs Discovered
+
+- When filling out the form to add a hike, the user was able to complete the form without selecting an option from the dropdown menu for the hike area and hike time. 
+
+    Fix: added a value attribute to the option element:
+
+    ```html
+    <option value="" selected disabled>Choose Area</option>
+    ```
+
+- The Welcome message is displayed in the navigation bar when no user is logged in.  
+
+    ![Image](images/welcome.png)
+    
+    Fix: Wrap the span for the welcome message in a jinja if block, which will only display the welcome message if a user is logged in.
+
+    ```html
+    {% if session['user'] %}
+        <span class="welcome-msg">Welcome, {{session['user']}}</span>
+    {% endif %}
+    ```
+
+- When adding or editing a hike, the value from the length input was being added to the database as a string. This was causing an error when the total length variable was being calculated as the code was adding strings as opposed to floating point numbers.
+
+    Fix: cast the length input fron the form as a float before adding it to the database.
+
+    ```python
+    'length': float(request.form.get('length')),
+    ```
+
+- On the hikes page, the value displayed for the average length contained too many digits due to length field being stored as a double in the database. 
+
+    ![Image](images/rounding_error.png)
+
+    Fix: Use string formatting to limit the number to two decimal places.
+
+    ```html
+    <h3 class="card-title">{{"%.2f"|format(sum_hike_lengths / total_hikes)}} km</h3>
+    ```
+
+- On the Add Hike form, the input field for the hike length was only able to accept a whole number including negative numbers.
+
+    Fix: Add a min value and step value to the input attribute.
+
+    ```html
+    <input type="number" class="form-control" name="length" id="length"
+        placeholder="Enter hike length" min="1" step=".01" required>
+    ```
+
+- When a new user registered and they visited their profile page before adding a hike, a zero division error occured, crashing the website. This was because an attempt was being made to divide the total_hikes_length variable by zero.
+
+    Fix: Wrap the code that calculates the average hike length in a jinja if-else block that displays 0 km if the the total_hikes variable is equal to zero.
+
+    ```html
+    {% if total_hikes != 0 %}
+        <h3 class="card-title">{{"%.2f"|format(total_hikes_length / total_hikes)}} km</h3>
+    {% else %}
+        <h3 class="card-title">0 km</h3>
+    {% endif %}
+    ```
+
+- When a user clicked on the button to edit a hike, the value displayed in the date input was the current date instead of the actual hike date. This was because the jQuery for generating the datepicker had a property called value which was set to the current date. This was overriding the hike date value that was being called from the database.
+
+Fix: remove the property value from the jQuery datepicker object.
+
+
+> [Back to Top](#table-of-contents)
