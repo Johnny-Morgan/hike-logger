@@ -226,6 +226,20 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 - Checked the 'View Hike' buttons are visible to logged in users and redirect to the relevant pages.
 
+- Confirmed that the welcome message in the navbar displays the correct username.
+
+### Hikes page
+
+- Confirmed that the statistics displayed were calculated correctly.
+
+- Confirmed that the table hikes contained all the hikes contained in the database.
+
+- Confirmed that the 'View' button for each hike redirected to the correct page.
+
+- Confirmed that the table of hikes was sortable by clicking on the table headers.
+
+- Confirmed that the search feature of the hikes table was functioning correctly.
+
 ### Profile page
 
 - Confirmed that the statistics displayed were calculated correctly.
@@ -328,3 +342,11 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
     - Confirmed that the correct flash message was displayed.
 
 - Checked that clicking the 'Cancel' button redirects the user to the hike page.
+
+#### Dashboard page
+
+- Confirmed that a 403 error message is displayed if a non-admin user or guest attempts to enter the dashboard page.
+
+- Confirmed all CRUD functionality for adding, editing and deleting a hike area was working correctly.
+
+- Confirmed all CRUD functionality for adding, editing and deleting a hike time was working correctly.
