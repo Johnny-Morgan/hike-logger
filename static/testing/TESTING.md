@@ -1,3 +1,24 @@
+# Testing
+
+## Table of Contents
+
+1. [**Testing Overview**](#testing-overview)
+2. [**Validation**](#validation)
+    - [**HTML**](#html)
+    - [**CSS**](#css)
+    - [**JavaScript**](#javascript)
+    - [**Python**](#python)
+3. [**Testing User Stories**](#testing-user-stories)
+4. [**Manual Testing on Live Site**](#manual-testing-on-live-site)
+
+## Testing Overview
+
+- The website was tested on Google Chrome, Mozilla Firefox, and Safari browsers.
+
+- Using Chrome developer tools the responsive nature of the site was tested on the Moto G4, Galaxy S5, iPhone5/SE, iPhone 6/7/8, iPad and Surface Duo.
+
+- The website was tested on real-life devices, namely a 14" Windows laptop, an Alcatel 1 Android Phone and an iPhone SE.
+
 ## Validation
 
 ### HTML
