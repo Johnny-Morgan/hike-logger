@@ -285,6 +285,8 @@ The testing data for this project can be found in a separate file called [TESTIN
 
 - The code to dynamically set the active class for the navigation links was taken from [stackoverflow](https://stackoverflow.com/questions/55895502/dynamically-setting-active-class-with-flask-and-jinja2/55895621#55895621).
 
+- The code for the 'role_required' decorator was taken from [stackoverflow](https://stackoverflow.com/questions/25233188/what-is-the-best-way-to-protect-a-flask-endpoint) and edited.
+
 ### Media
 
 - The home page hero image is taken from [goworldtravel](https://www.goworldtravel.com/hiking-in-patagonia/).

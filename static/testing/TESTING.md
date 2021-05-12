@@ -173,3 +173,23 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
         
         ![Image](../images/readme/complete1.png)
         ![Image](../images/readme/complete2.png)
+
+- As an **admin** I want to be able to: 
+
+    1. *Edit a hike that has been added to the website by a user.*
+
+        When logged in as an admin, the edit button is visible for every hike, which allows for the admin to edit all hikes. 
+    
+    2. *Delete a hike that has been added to the website by a user.*
+
+        When logged in as an admin, the delete button is visible for every hike, which allows for the admin to delete all hikes. 
+
+    3. *Add a new hike category to the website such as new hike areas and times.*
+
+        When logged in as an admin, a navigation link to the dashboard is visible on the nav bar.
+
+        ![Image](images/navbar_dashboard.png)
+
+        The dashboard provides full CRUD functionality for the admin allowinbg them to create, view, edit and delete hike areas and times.
+
+        ![Image](images/admin_dashboard.png)
