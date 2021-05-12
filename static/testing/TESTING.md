@@ -237,3 +237,76 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 - Confirmed that the table of hikes was sortable by clicking on the table headers.
 
 - Confirmed that the search feature of the hikes table was functioning correctly.
+
+### Hike page
+
+- Confirmed that the correct hike information was displayed.
+
+- Confirmed that the edit and delete buttons were only visible to the user that added the hike and visible to an admin user.
+
+#### Complete hike feature
+
+- Confirmed that the 'complete' button was only visible to users who had not completed the hike.
+
+- Checked that the user was redirected to the complete_hike page when they clicked the complete button.
+
+- Chose a date from the datepicker and clicked the 'Yes' button:
+
+    - Confirmed that the user was added to the 'Hiked by' list displayed on the hike page.
+
+    - Confirmed that the date the user completed the hike was displayed.
+
+    - Confirmed that the 'hiked_by' field in the relevant hikes collection of the database was updated correctly.
+
+    - Checked the correct flash message was displayed.
+
+- Checked that clicking the 'Cancel' button on the complete_hike page redirects the user to the hike page.
+
+#### Incomplete hike feature
+
+- Confirmed that the 'incomplete' button was only visible to users who have completed the hike.
+
+- Checked that the user was redirected to the incomplete_hike page when they clicked the incomplete button.
+
+- Clicked the 'Yes' button and checked that the user was removed from the 'Hiked by' list displayed on the hike page and the correct flash message was displayed.
+
+- Confirmed that the 'hiked_by' field in the relevant hikes collection of the database was updated correctly.
+
+- Checked that clicking the 'Cancel' button on the incomplete_hike page redirects the user to the hike page.
+
+#### Edit hike
+
+- Clicked the 'Edit Hike' button to confirm user is redirected to the edit_hike page.
+
+- Confirmed that the form was populated with the correct data.
+
+- Clicked the 'Edit Hike' button:
+
+    - Checked that the edited fields in the relevant hikes collection of the database was updated correctly.
+
+    - Checked that the information about the hike on its hike page was updated correctly.
+
+    - Confirmed that the correct flash message was displayed.
+
+#### Delete hike
+
+- Clicked the Delete button to confirm the user is redirected to the delete_hike page.
+
+- Clicked the 'Yes' button:
+
+    - Confirmed that the hike was deleted from the database.
+
+    - Confirmed that the hike was removed from the table in the users profile page.
+
+    - Confirmed that the stats of the user were updated to reflect the deletion of the hike.
+
+    - Confirmed that the hike was removed from the table in the hikes page.
+
+    - Confirmed that the correct flash message was displayed.
+
+    - If the hike was one of the four latest hikes to be added to the database, it was confirmed that the latest hikes on the home page was updated.
+
+- Checked that clicking the 'Cancel' button on the delete_hike page redirects the user to the hike page.
+
+
+
