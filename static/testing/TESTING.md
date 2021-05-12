@@ -309,4 +309,22 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 - Checked that clicking the 'Cancel' button on the delete_hike page redirects the user to the hike page.
 
 
+#### Add Hike page
 
+- Clicked the 'Add Hike' button:
+
+    - Confirmed warning message is displayed if any of the fields are left empty.
+
+    - Checked that the hike is added to the hikes collection of the database.
+
+    - Confirmed that the hike was added to the table in the users profile page.
+
+    - Confirmed that the stats of the user were updated to reflect the addition of the hike.
+
+    - Confirmed that the hike was added to the table in the hikes page.
+    
+    - Checked that the hike is added to latest hikes on the home page.
+
+    - Confirmed that the correct flash message was displayed.
+
+- Checked that clicking the 'Cancel' button redirects the user to the hike page.
