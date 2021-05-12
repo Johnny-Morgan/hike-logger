@@ -1,3 +1,9 @@
+<div align="center">
+    <a href="https://hike-logger.herokuapp.com/" target="_blank"><img src="static/images/readme/home_screenshot.png" alt="hike logger home"></a>
+    <h3><a href="https://hike-logger.herokuapp.com/" target="_blank">Click here</a> to view the site on Heroku.</h3>
+</div>
+
+
 ## User Experience
 
 - ### User Stories
@@ -79,19 +85,19 @@
 
     The links in the navigation bar change depending on the type of user visitng the site. For a guest or a user not logged in, the navbar displays links to the home page as well as the login and register pages. 
 
-    ![Image](static/images/readme/navbar1.png)
+    ![Image](static/images/readme/navbar_logged_out.png)
 
      For a logged in user, the navbar displays links to the home page, hikes page, profile page, add a hike page and the logout page. A welcome message is displayed with user's name.
 
-    ![Image](static/images/readme/navbar2.png)
+    ![Image](static/images/readme/navbar_user.png)
 
     For an admin, a link to the admin dashboard is displayed.
 
-    ![Image](static/images/readme/navbar3.png)
+    ![Image](static/images/readme/navbar_admin.png)
 
     The navigation is fully responsive with a hamburger icon and dropdown menu a feature for mobile devices.
 
-    ![Image](static/images/readme/navbar4.png)
+    ![Image](static/images/readme/navbar_mobile.png)
 
 
   - Footer with social media links.
@@ -136,13 +142,13 @@
 
   Each hike on the site has its own page which displays the name, notes, stats and a picture of the hike. The stats section has a feature which displays all the registered users that have completed the hike. Below the stats card there is a card that displays the date that the logged in user completed the hike. The user can mark the hike as incomplete if they wish to do so.
 
-  ![Image](static/images/readme/incomplete1.png)
-  ![Image](static/images/readme/incomplete2.png)
+  ![Image](static/images/readme/incomplete_btn.png)
+  ![Image](static/images/readme/incomplete_form.png)
 
   If they have not completed the hike they have the option to do so by clicking on the complete button. This will redirect the user to a new page where they can choose a date for when they completed the hike. Marking a hike as complete will add the users name to the 'hiked by' list in the stats section. Marking a hike as incomplete will remove them from the list. 
 
-  ![Image](static/images/readme/complete1.png)
-  ![Image](static/images/readme/complete2.png)
+  ![Image](static/images/readme/complete_btn.png)
+  ![Image](static/images/readme/complete_form.png)
 
   The user has the option to edit or delete the hike provided they are the user who added the hike to the website. If they did not add the hike, the edit and delete buttons will not be visible to them. Clicking on the 'Edit Hike' button will redirect the user to a new page where a form is displayed with the current hike details.
 
@@ -319,3 +325,5 @@ The testing data for this project can be found in a separate file called [TESTIN
 - The background image is taken from [wikipedia](https://en.wikipedia.org/wiki/Wicklow_Way#/media/File:J_B_Malone_Memorial.jpg).
 
 - The site logo and favicon is from [flaticon](https://www.flaticon.com/free-icon/mountains_762437?term=mountain&page=1&position=18&page=1&position=18&related_id=762437&origin=search).
+
+
