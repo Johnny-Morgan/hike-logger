@@ -14,11 +14,11 @@
 
 ## Testing Overview
 
-- The website was tested on Google Chrome, Mozilla Firefox, and Safari browsers.
+- The website was tested on Google Chrome, Mozilla Firefox, Safari and MicroSoft Edge browsers.
 
 - Using Chrome developer tools the responsive nature of the site was tested on the Moto G4, Galaxy S5, iPhone5/SE, iPhone 6/7/8, iPad and Surface Duo.
 
-- The website was tested on real-life devices, namely a 14" Windows laptop, an Alcatel 1 Android Phone and an iPhone SE.
+- The website was tested on real-life devices, namely a 14" Windows laptop, an Alcatel 1 Android Phone, an iPhone SE and a 5th generation iPad.
 
 ## Validation
 
@@ -344,7 +344,6 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 - Checked that clicking the 'Cancel' button on the delete_hike page redirects the user to the hike page.
 
-
 #### Add Hike page
 
 - Clicked the 'Add Hike' button:
@@ -372,6 +371,22 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 - Confirmed all CRUD functionality for adding, editing and deleting a hike area was working correctly.
 
 - Confirmed all CRUD functionality for adding, editing and deleting a hike time was working correctly.
+
+#### Footer
+
+- Clicked on all social media links to confirm they open correctly in a new browser tab.
+
+#### Error pages
+
+- Entered an invalid url to confirm the user is redirected to the 404 error page.
+
+- Clicked on the button to confirm it redirected to the hikes page.
+
+- Attempted to access the dashboard page when logged in as a non-admin user to confirm that the user is redirected to the 403 error page.
+
+- Attempted to access the dashboard page as a guest to confirm that the guest is redirected to the 403 error page.
+
+- Confirmed that non-admin users and guests are redirected to the 403 error page when attempting to access the add_area and add_time pages.
 
 ## Bugs Discovered
 
