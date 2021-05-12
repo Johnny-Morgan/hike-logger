@@ -436,7 +436,7 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 - When a user clicked on the button to edit a hike, the value displayed in the date input was the current date instead of the actual hike date. This was because the jQuery for generating the datepicker had a property called value which was set to the current date. This was overriding the hike date value that was being called from the database.
 
-Fix: remove the property value from the jQuery datepicker object.
+    Fix: remove the property value from the jQuery datepicker object.
 
 
 > [Back to Top](#table-of-contents)

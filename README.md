@@ -169,6 +169,31 @@
   ![Image](static/images/readme/admin.jpg)
 
   The admin dashboard is only accessible by admin users. Here the admin can add, edit or delete hike areas and times. 
+
+### Future features
+
+The following are elements that could be added to the site in future development:
+
+- An option for a user to upload a hike to Google Maps or OpenStreetMap.
+
+- A user can upload an image instead of a url.
+
+- A gallery of photos or each hike.
+
+- A user can give each hike a rating.
+
+- Forgotten password functionality.
+
+- A contact form to contact the site owner.
+
+- The ability for a user to mark a hike as complete multiple times, with a different date for each time.
+
+- An option for a user to submit the exact time they took to walk a hike and use this information to calculate the users average speed. 
+
+- An option for a user to submit additional hike statistics such as the elevation gain, total ascent or descent.
+
+- A secton for a user to store personal notes about the hike that they can keep private or mark as public should they wish to do so.
+
 ## Technologies Used
 
 ### Languages Used
