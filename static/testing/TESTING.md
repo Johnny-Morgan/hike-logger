@@ -196,13 +196,13 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 ## Manual Testing on Live Site
 
-Navigation
+### Navigation
 
 - Checked the relevant navigation links were visible to a guest, a logged in user and an admin user.
 
 - Checked all navigation links from the menu to confirm that they direct to correct pages.
 
-Registration page
+### Registration page
 
 - Attempted to register with a username that did not meet the relevent criteria to confirm that the correct warning message was displayed.
 
@@ -212,3 +212,28 @@ Registration page
 
 - Checked that the login link redirects to the login page.
 
+### Login page
+
+- Attempted to login with incorrect login credentials to confirm flash message was displayed.
+
+- Checked that the registration link redirects to the registration page.
+
+### Home page
+
+- Confirmed that the latest hikes displayed were the last four hikes added to the database.
+
+- Checked that the 'Login to view' buttons were visible to guests and redirect to the login page.
+
+- Checked the 'View Hike' buttons are visible to logged in users and redirect to the relevant pages.
+
+### Profile page
+
+- Confirmed that the statistics displayed were calculated correctly.
+
+- Confirmed that the table hikes contained only hikes that the logged in user had completed.
+
+- Confirmed that the 'View' button for each hike redirected to the correct page.
+
+- Confirmed that the table of hikes was sortable by clicking on the table headers.
+
+- Confirmed that the search feature of the hikes table was functioning correctly.
