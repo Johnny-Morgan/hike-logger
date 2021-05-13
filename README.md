@@ -85,6 +85,8 @@ Hike Logger is a website that allows hiking enthusiasts in Ireland to log and st
 
   - [Add Hike](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/add_hike.pdf).
 
+  - [Dashboard](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/dashboard.pdf).
+
   Deviations from the wireframes.
 
   - On the registration page, the text under the text boxes was removed to give the registration form a cleaner look.
