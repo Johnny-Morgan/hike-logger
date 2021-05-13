@@ -71,21 +71,21 @@ Hike Logger is a website that allows hiking enthusiasts in Ireland to log and st
 
   The wireframes for this project were created using Balsamiq.
 
-  - [Register](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/register.pdf).
+  - [Register](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/register.pdf)
 
-  - [Login](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/login.pdf).
+  - [Login](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/login.pdf)
   
-  - [Homepage](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/home.pdf).
+  - [Homepage](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/home.pdf)
 
-  - [Hikes](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/all_hikes.pdf).
+  - [Hikes](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/all_hikes.pdf)
 
-  - [Profile](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/profile.pdf).
+  - [Profile](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/profile.pdf)
 
-  - [Hike](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/hike.pdf).
+  - [Hike](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/hike.pdf)
 
-  - [Add Hike](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/add_hike.pdf).
+  - [Add Hike](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/add_hike.pdf)
 
-  - [Dashboard](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/dashboard.pdf).
+  - [Dashboard](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/dashboard.pdf)
 
   Deviations from the wireframes.
 
@@ -359,4 +359,10 @@ The testing data for this project can be found in a separate file called [TESTIN
 
 - The site logo and favicon is from [flaticon](https://www.flaticon.com/free-icon/mountains_762437?term=mountain&page=1&position=18&page=1&position=18&related_id=762437&origin=search).
 
+## Acknowledgements
 
+Thank you to my mentor Gerard McBride for his support and guidance during this project.
+
+Thank you to the Code Institute Slack community for their advice and tips.
+
+Thank you to the numerous family members and friends who tested the site.
