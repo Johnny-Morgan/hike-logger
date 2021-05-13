@@ -24,8 +24,8 @@ mongo = PyMongo(app)
 @app.route('/home')
 def home():
     '''
-    Returns the 4 most recently added hikes from the db
-    Renders home page
+    Returns the 4 most recently added hikes from the database.
+    Renders home page.
     '''
     # get the 4 most recently added hikes from the db
     latest_hikes = list(mongo.db.hikes.find())[-4:]
@@ -34,6 +34,12 @@ def home():
 
 @app.route('/get_hikes')
 def get_hikes():
+    '''
+    Calculates the total amount of hikes in the database.
+    Calculates the sum of all the hike lengths in the database.
+    Calculates the total amount of hikes for each area in the database.
+    Renders the hikes.html template.
+    '''
     hikes = mongo.db.hikes.find()
     # count number of hikes in the db
     total_hikes = mongo.db.hikes.count_documents({})
@@ -66,6 +72,12 @@ def get_hikes():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
+    '''
+    Renders registration page.
+    Redirects to register page if username already exists in
+    the database and registration fails.
+    Redirects to the hikes page if registration is successful.
+    '''
     if request.method == 'POST':
         # check if username already exists in the database
         user = request.form.get('username')
@@ -93,6 +105,11 @@ def register():
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+    '''
+    Renders the login page.
+    Redirects to the profile page if login successful.
+    Redirects to the login page if login unsuccessful.
+    '''
     if request.method == 'POST':
         # check if username already exists in the db
         existing_user = mongo.db.users.find_one(
@@ -123,7 +140,9 @@ def login():
 
 @app.route('/logout')
 def logout():
-    # remove user from session cookies
+    '''
+    Removes user from session cookies.
+    '''
     flash('You have been logged out', category='success')
     session.pop('user')
     return redirect(url_for('login'))
@@ -131,8 +150,13 @@ def logout():
 
 @app.route('/profile/<username>', methods=['GET', 'POST'])
 def profile(username):
+    '''
+    Renders the profile page.
+    Returns the hike details that the logged-in user has completed.
+    Returns the total number of hikes the logged-in user has completed.
+    Returns the total length of all the hikes the logged-in user has completed.
+    '''
     hikes = mongo.db.hikes.find()
-
     '''loop through all hikes in db,
     all hikes that the user has hiked
     are appended to users_hikes array
@@ -140,6 +164,7 @@ def profile(username):
     users_hikes = []
     total_hikes_length = 0
 
+    ##TODO Refactor code to remove triple nested for loop
     for hike in hikes:
         for hiker in hike['hiked_by']:
             for name in hiker.keys():
@@ -162,12 +187,18 @@ def profile(username):
 
 @app.route('/hike/<hike_id>')
 def hike(hike_id):
+    '''
+    Renders the relevent hike page.
+    Returns the names of the hikers that have completed the hike.
+    Returns the date the logged-in user completed the hike.
+    '''
     hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
     hikers = []
     user_hike_date = ''
     for hiker in hike['hiked_by']:
         for name, date in hiker.items():
             hikers.append(name)
+            # Find the date the logged-in user completed the hike
             if name == session['user']:
                 user_hike_date = date
     return render_template(
@@ -179,6 +210,11 @@ def hike(hike_id):
 
 @app.route('/add_hike', methods=['GET', 'POST'])
 def add_hike():
+    '''
+    Renders the add hike page.
+    Redirects to the hikes page when a hike is
+    successfully added to the database.
+    '''
     if request.method == 'POST':
         hike = {
             'name': request.form.get('name'),
@@ -197,6 +233,7 @@ def add_hike():
                     {session['user']: request.form.get('date')}}})
         flash('Hike successfully added', category='success')
         return redirect(url_for('get_hikes'))
+    # areas and times required to populate the dropdown menus of the form
     areas = mongo.db.areas.find().sort('name', 1)
     times = mongo.db.times.find().sort('time', 1)
     return render_template('add_hike.html', areas=areas, times=times)
@@ -204,11 +241,15 @@ def add_hike():
 
 @app.route('/edit_hike/<hike_id>', methods=['GET', 'POST'])
 def edit_hike(hike_id):
+    '''
+    Renders the edit hike page.
+    Redirects to the hike page when a hike is successfully edited.
+    '''
     hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
     hikers = hike['hiked_by']
     original_hike_date = ''
 
-    ##TODO replace nested for loop with mongodb query
+    ##TODO replace triple nested for loop with mongodb query
     for hiker in hikers:
         for name in hiker.keys():
             if name == session['user']:
@@ -245,6 +286,12 @@ def edit_hike(hike_id):
 
 @app.route('/delete_hike/<hike_id>', methods=['GET', 'POST'])
 def delete_hike(hike_id):
+    '''
+    Renders the delete a hike page.
+    Deletes a hike from the database.
+    Redirect to the hikes page after the
+    successfull deletion of a hike.
+    '''
     if request.method == 'POST':
         mongo.db.hikes.remove({'_id': ObjectId(hike_id)})
         flash('Hike successfully deleted', category='success')
@@ -255,6 +302,10 @@ def delete_hike(hike_id):
 
 @app.route('/complete_hike/<hike_id>', methods=['GET', 'POST'])
 def complete_hike(hike_id):
+    '''
+    Renders the complete hike page.
+    Updates the hiked_by field of the database.
+    '''
     hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
     if request.method == 'POST':
         mongo.db.hikes.update(
@@ -269,6 +320,10 @@ def complete_hike(hike_id):
 
 @app.route('/incomplete_hike/<hike_id>', methods=['GET', 'POST'])
 def incomplete_hike(hike_id):
+    '''
+    Renders the complete hike page.
+    Updates the hiked_by field of the database.
+    '''
     hike = mongo.db.hikes.find_one({'_id': ObjectId(hike_id)})
     user_hike_date = ''
     for hiker in hike['hiked_by']:
@@ -288,7 +343,7 @@ def role_required(role_name):
     '''
     Checks if the current user is an admin or not.
     Throws a 403 error if not an admin.
-    Throws a 403 error if not logged in.
+    Throws a 403 error if not logged-in.
     '''
     def decorator(func):
         @wraps(func)
@@ -309,17 +364,27 @@ def role_required(role_name):
 
 @app.errorhandler(403)
 def error_403(e):
+    '''
+    Renders the custom 403 error page.
+    '''
     return render_template('403.html')
 
 
 @app.errorhandler(404)
 def error_404(e):
+    '''
+    Renders the custom 404 error page.
+    '''
     return render_template('404.html')
 
 
 @app.route('/dashboard')
 @role_required('admin')
 def dashboard():
+    '''
+    Renders the dashboard page.
+    Returns the hike areas and times from the database.
+    '''
     areas = list(mongo.db.areas.find().sort('name', 1))
     times = list(mongo.db.times.find().sort('time', 1))
     return render_template('dashboard.html', areas=areas, times=times)
@@ -328,6 +393,10 @@ def dashboard():
 @app.route('/add_area', methods=['GET', 'POST'])
 @role_required('admin')
 def add_area():
+    '''
+    Renders the add area page.
+    Redirects to the dashboard on successful adding of an area.
+    '''
     if request.method == 'POST':
         area = {'name': request.form.get('name')}
         mongo.db.areas.insert_one(area)
@@ -339,6 +408,11 @@ def add_area():
 @app.route('/edit_area/<area_id>', methods=['GET', 'POST'])
 @role_required('admin')
 def edit_area(area_id):
+    '''
+    Renders the edit area page.
+    Redirects to the dashboard on successful editing of an area.
+
+    '''
     area = mongo.db.areas.find_one({'_id': ObjectId(area_id)})
     if request.method == 'POST':
         area = {
@@ -353,6 +427,10 @@ def edit_area(area_id):
 @app.route('/delete_area/<area_id>', methods=['GET', 'POST'])
 @role_required('admin')
 def delete_area(area_id):
+    '''
+    Renders the delete area page.
+    Redirects to the dashboard on successful deletion of an area.
+    '''
     if request.method == 'POST':
         mongo.db.areas.remove({'_id': ObjectId(area_id)})
         flash('Area successfully deleted', category='success')
@@ -364,6 +442,10 @@ def delete_area(area_id):
 @app.route('/add_time', methods=['GET', 'POST'])
 @role_required('admin')
 def add_time():
+    '''
+    Renders the add time page.
+    Redirects to the dashboard on successful adding of a time.
+    '''
     if request.method == 'POST':
         time = {'time': request.form.get('time')}
         mongo.db.times.insert_one(time)
@@ -375,6 +457,10 @@ def add_time():
 @app.route('/edit_time/<time_id>', methods=['GET', 'POST'])
 @role_required('admin')
 def edit_time(time_id):
+    '''
+    Renders the edit time page.
+    Redirects to the dashboard on successful editing of a time.
+    '''
     time = mongo.db.times.find_one({'_id': ObjectId(time_id)})
     if request.method == 'POST':
         time = {
@@ -388,6 +474,10 @@ def edit_time(time_id):
 
 @app.route('/delete_time/<time_id>', methods=['GET', 'POST'])
 def delete_time(time_id):
+    '''
+    Renders the delete time page.
+    Redirects to the dashboard on successful deletion of a time.
+    '''
     if request.method == 'POST':
         mongo.db.times.remove({'_id': ObjectId(time_id)})
         flash('Time successfully deleted', category='success')
