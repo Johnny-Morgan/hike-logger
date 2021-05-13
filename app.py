@@ -23,6 +23,10 @@ mongo = PyMongo(app)
 @app.route('/')
 @app.route('/home')
 def home():
+    '''
+    Returns the 4 most recently added hikes from the db
+    Renders home page
+    '''
     # get the 4 most recently added hikes from the db
     latest_hikes = list(mongo.db.hikes.find())[-4:]
     return render_template('home.html', latest_hikes=latest_hikes)
@@ -395,4 +399,4 @@ def delete_time(time_id):
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=True)
+            debug=False)
