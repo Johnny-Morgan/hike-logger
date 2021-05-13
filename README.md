@@ -3,6 +3,24 @@
     <h3><a href="https://hike-logger.herokuapp.com/" target="_blank">Click here</a> to view the site on Heroku.</h3>
 </div>
 
+## Table of Contents
+
+1. [**Introduction**](#introduction)
+2. [**User Experience**](#user-experience)
+    - [**User Stories**](#user-stories)
+    - [**Wireframes**](#wireframes)
+    - [**Design**](#design)
+3. [**Features**](#features)
+    - [**Existing Features**](#existing-features)
+    - [**Future Features**](#future-features)
+4. [**Technologies Used**](#technologies-used)
+5. [**Testing**](#testing)
+6. [**Deployment**](#deployment)
+    - [**Deploying to GitHub Pages**](#deploying-to-github-pages)
+    - [**Forking the GitHub Repository**](#forking-the-github-repository)
+    - [**Cloning the GitHub Repository**](#cloning-the-github-repository)
+7. [**Credits**](#credits)
+8. [**Acknowledgements**](#acknowledgements)
 
 ## Introduction
 
