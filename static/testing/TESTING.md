@@ -14,7 +14,7 @@
 
 ## Testing Overview
 
-- The website was tested on Google Chrome, Mozilla Firefox, Safari and MicroSoft Edge browsers.
+- The website was tested on Google Chrome, Mozilla Firefox, Safari and Microsoft Edge browsers.
 
 - Using Chrome developer tools the responsive nature of the site was tested on the Moto G4, Galaxy S5, iPhone5/SE, iPhone 6/7/8, iPad and Surface Duo.
 
@@ -77,7 +77,7 @@ The [W3C Markup Validator](https://validator.w3.org/#validate_by_input) service 
 
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) service was used to validate the CSS code.
 
-- 2 errors were found. These errors occured because the custom light-green and green variables were used in the linear-gradient function. This seems to be a quirk of the W3C CSS validator as discussed [here](https://stackoverflow.com/questions/64754909/css-validator-error-value-error-background-100-is-not-a-color-stop-value) on stackoverflow. A solution would be to replace the custom variables with the original hex values but I decided to leave the code as is, to make it easier to read and maintain.
+- 2 errors were found. These errors occurred because the custom light-green and green variables were used in the linear-gradient function. This seems to be a quirk of the W3C CSS validator as discussed [here](https://stackoverflow.com/questions/64754909/css-validator-error-value-error-background-100-is-not-a-color-stop-value) on stackoverflow. A solution would be to replace the custom variables with the original hex values but I decided to leave the code as it is, to make it easier to read and maintain.
 
 - A total of 29 warnings were found. 
 
@@ -91,7 +91,7 @@ The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
 
 [JSHint](https://jshint.com/) was used to validate the JavaScript code of the project.
 
-- Four warnings for 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). These warnings can be safley ignored.
+- Four warnings for 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz). These warnings can be safely ignored.
 
 - The jQuery $ symbols are declared as undefined variables. This can be safely ignored.
 
@@ -119,7 +119,7 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
         ![Image](images/register.png)
 
-        A registered user that is logged in can then access the functionality to add a hike to the site.
+        A registered user that is logged-in can then access the functionality to add a hike to the site.
 
         ![Image](images/add_hike.png)
 
@@ -142,11 +142,11 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
         A form is provided for a user to add a hike. 
         - The hike name is inputted using a text field.
-        - The hike area is chosen from a dropdwon menu.
-        - The hike length is inputed using a number field. 
-        - The hike time is chosen from a dropdwon menu.
-        - The hike notes are inputed using a textarea field.
-        - A url input is provided to add a link to a photo.
+        - The hike area is chosen from a dropdown menu.
+        - The hike length is inputted using a number field. 
+        - The hike time is chosen from a dropdown menu.
+        - The hike notes are inputted using a textarea field.
+        - A URL input is provided to add a link to a photo.
         - The hike date is chosen from a datepicker.
 
     3. *View all the hikes I have completed in a table that I can sort based on the hike length or time to complete.*
@@ -161,7 +161,7 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
         ![Image](images/search_table.png)
 
-    5. *View each hike on a seperate page which shows all the information on the hike.*
+    5. *View each hike on a separate page which shows all the information on the hike.*
 
         There is a button displayed beside each hike in the table that redirects the user to a separate page that displays all the hike information including the hike photo and other users who have completed the hike.
 
@@ -187,32 +187,32 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
     9. *View all the hikes on the website that other users have added and be able to search and filter these hikes.*
 
-        There is a table in the 'Hikes' page which contains all the hikes that have been added to the site. The table can be sorted by clicking on the table headers and can be searched using the search bar.
+        There is a table on the 'Hikes' page which contains all the hikes that have been added to the site. The table can be sorted by clicking on the table headers and can be searched using the search bar.
 
     10. *Have the opportunity to mark hikes that other users have added as completed and add them to the list of my completed hikes.*
 
-        On the page for each hike there is a 'complete' button that a user can click. This allows the user to mark the hike as complete and they can add the date they completed the hike. The hike is then added to the table in their profile page.
+        On the page for each hike, there is a 'complete' button that a user can click. This allows the user to mark the hike as complete and they can add the date they completed the hike. The hike is then added to the table on their profile page.
         
-        ![Image](../images/readme/complete1.png)
-        ![Image](../images/readme/complete2.png)
+        ![Image](../images/readme/complete_btn.png)
+        ![Image](../images/readme/complete_form.png)
 
 - As an **admin** I want to be able to: 
 
     1. *Edit a hike that has been added to the website by a user.*
 
-        When logged in as an admin, the edit button is visible for every hike, which allows for the admin to edit all hikes. 
+        When logged-in as an admin, the edit button is visible for every hike, which allows for the admin to edit all hikes. 
     
     2. *Delete a hike that has been added to the website by a user.*
 
-        When logged in as an admin, the delete button is visible for every hike, which allows for the admin to delete all hikes. 
+        When logged-in as an admin, the delete button is visible for every hike, which allows for the admin to delete all hikes. 
 
     3. *Add a new hike category to the website such as new hike areas and times.*
 
-        When logged in as an admin, a navigation link to the dashboard is visible on the nav bar.
+        When logged-in as an admin, a navigation link to the dashboard is visible on the nav bar.
 
         ![Image](images/navbar_dashboard.png)
 
-        The dashboard provides full CRUD functionality for the admin allowinbg them to create, view, edit and delete hike areas and times.
+        The dashboard provides full CRUD functionality for the admin allowing them to create, view, edit and delete hike areas and times.
 
         ![Image](images/admin_dashboard.png)
 
@@ -220,15 +220,15 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 ### Navigation
 
-- Checked the relevant navigation links were visible to a guest, a logged in user and an admin user.
+- Checked the relevant navigation links were visible to a guest, a logged-in user and an admin user.
 
 - Checked all navigation links from the menu to confirm that they direct to correct pages.
 
 ### Registration page
 
-- Attempted to register with a username that did not meet the relevent criteria to confirm that the correct warning message was displayed.
+- Attempted to register with a username that did not meet the relevant criteria to confirm that the correct warning message was displayed.
 
-- Attempted to register with a password that did not meet the relevent criteria to confirm that the correct warning message was dispalyed.
+- Attempted to register with a password that did not meet the relevant criteria to confirm that the correct warning message was displayed.
 
 - Registered as a new user and confirmed that the user was redirected to the hikes page and the correct flash message was displayed.
 
@@ -236,7 +236,7 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 ### Login page
 
-- Attempted to login with incorrect login credentials to confirm flash message was displayed.
+- Attempted to login with incorrect login credentials to confirm the flash message was displayed.
 
 - Checked that the registration link redirects to the registration page.
 
@@ -246,7 +246,7 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 - Checked that the 'Login to view' buttons were visible to guests and redirect to the login page.
 
-- Checked the 'View Hike' buttons are visible to logged in users and redirect to the relevant pages.
+- Checked the 'View Hike' buttons are visible to logged-in users and redirect to the relevant pages.
 
 - Confirmed that the welcome message in the navbar displays the correct username.
 
@@ -266,7 +266,7 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 - Confirmed that the statistics displayed were calculated correctly.
 
-- Confirmed that the table hikes contained only hikes that the logged in user had completed.
+- Confirmed that the table hikes contained only hikes that the logged-in user had completed.
 
 - Confirmed that the 'View' button for each hike redirected to the correct page.
 
@@ -312,13 +312,13 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 #### Edit hike
 
-- Clicked the 'Edit Hike' button to confirm user is redirected to the edit_hike page.
+- Clicked the 'Edit Hike' button to confirm the user is redirected to the edit_hike page.
 
 - Confirmed that the form was populated with the correct data.
 
 - Clicked the 'Edit Hike' button:
 
-    - Checked that the edited fields in the relevant hikes collection of the database was updated correctly.
+    - Checked that the edited fields in the relevant hikes collection of the database were updated correctly.
 
     - Checked that the information about the hike on its hike page was updated correctly.
 
@@ -332,7 +332,7 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
     - Confirmed that the hike was deleted from the database.
 
-    - Confirmed that the hike was removed from the table in the users profile page.
+    - Confirmed that the hike was removed from the table in the user's profile page.
 
     - Confirmed that the stats of the user were updated to reflect the deletion of the hike.
 
@@ -340,7 +340,7 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
     - Confirmed that the correct flash message was displayed.
 
-    - If the hike was one of the four latest hikes to be added to the database, it was confirmed that the latest hikes on the home page was updated.
+    - If the hike was one of the four latest hikes to be added to the database, it was confirmed that the latest hikes on the home page were updated.
 
 - Checked that clicking the 'Cancel' button on the delete_hike page redirects the user to the hike page.
 
@@ -358,7 +358,7 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
     - Confirmed that the hike was added to the table in the hikes page.
     
-    - Checked that the hike is added to latest hikes on the home page.
+    - Checked that the hike is added to the latest hikes on the home page.
 
     - Confirmed that the correct flash message was displayed.
 
@@ -378,11 +378,11 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
 
 #### Error pages
 
-- Entered an invalid url to confirm the user is redirected to the 404 error page.
+- Entered an invalid URL to confirm the user is redirected to the 404 error page.
 
 - Clicked on the button to confirm it redirected to the hikes page.
 
-- Attempted to access the dashboard page when logged in as a non-admin user to confirm that the user is redirected to the 403 error page.
+- Attempted to access the dashboard page when logged-in as a non-admin user to confirm that the user is redirected to the 403 error page.
 
 - Attempted to access the dashboard page as a guest to confirm that the guest is redirected to the 403 error page.
 
@@ -398,11 +398,11 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
     <option value="" selected disabled>Choose Area</option>
     ```
 
-- The Welcome message is displayed in the navigation bar when no user is logged in.  
+- The Welcome message is displayed in the navigation bar when no user is logged-in.  
 
     ![Image](images/welcome.png)
     
-    Fix: Wrap the span for the welcome message in a jinja if block, which will only display the welcome message if a user is logged in.
+    Fix: Wrap the span for the welcome message in a jinja if block, which will only display the welcome message if a user is logged-in.
 
     ```html
     {% if session['user'] %}
@@ -410,15 +410,15 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
     {% endif %}
     ```
 
-- When adding or editing a hike, the value from the length input was being added to the database as a string. This was causing an error when the total length variable was being calculated as the code was adding strings as opposed to floating point numbers.
+- When adding or editing a hike, the value from the length input was being added to the database as a string. This was causing an error when the total length variable was being calculated as the code was adding strings as opposed to floating-point numbers.
 
-    Fix: cast the length input fron the form as a float before adding it to the database.
+    Fix: cast the length input from the form as a float before adding it to the database.
 
     ```python
     'length': float(request.form.get('length')),
     ```
 
-- On the hikes page, the value displayed for the average length contained too many digits due to length field being stored as a double in the database. 
+- On the hikes page, the value displayed for the average length contained too many digits due to the length field being stored as a double in the database. 
 
     ![Image](images/rounding_error.png)
 
@@ -437,9 +437,9 @@ The [ExtendsClass](https://extendsclass.com/python-tester.html) Python syntax ch
         placeholder="Enter hike length" min="1" step=".01" required>
     ```
 
-- When a new user registered and they visited their profile page before adding a hike, a zero division error occured, crashing the website. This was because an attempt was being made to divide the total_hikes_length variable by zero.
+- When a new user registered and they visited their profile page before adding a hike, a zero division error occurred, crashing the website. This was because an attempt was being made to divide the total_hikes_length variable by zero.
 
-    Fix: Wrap the code that calculates the average hike length in a jinja if-else block that displays 0 km if the the total_hikes variable is equal to zero.
+    Fix: Wrap the code that calculates the average hike length in a jinja if-else block that displays 0 km if the total_hikes variable is equal to zero.
 
     ```html
     {% if total_hikes != 0 %}
