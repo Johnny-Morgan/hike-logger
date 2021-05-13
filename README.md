@@ -4,6 +4,12 @@
 </div>
 
 
+## Introduction
+
+![Image](static/images/readme/mockup.png)
+
+Hike Logger is a website that allows hiking enthusiasts in Ireland to log and store details about the hikes they have undertaken. Users can also view the hikes that their fellow hikers have added to the site. 
+
 ## User Experience
 
 - ### User Stories
