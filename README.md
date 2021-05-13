@@ -26,7 +26,7 @@
 
 ![Image](static/images/readme/mockup.png)
 
-Hike Logger is a website that allows hiking enthusiasts in Ireland to log and store details about the hikes they have undertaken. Users can also view the hikes that their fellow hikers have added to the site. 
+Hike Logger is a website that allows hiking enthusiasts in Ireland to log and store details about the hikes they have undertaken. Users can also view their stats and view hikes that their fellow hikers have added to the site. Full CRUD functionality is a feature of the site allowing users to add, edit and delete hikes. 
 
 ## User Experience
 
@@ -85,6 +85,13 @@ Hike Logger is a website that allows hiking enthusiasts in Ireland to log and st
 
   - [Add Hike](https://github.com/Johnny-Morgan/hike-logger/blob/master/static/wireframes/add_hike.pdf).
 
+  Deviations from the wireframes.
+
+  - On the registration page, the text under the text boxes was removed to give the registration form a cleaner look.
+
+  - Guests do not have direct access to the hikes page. The hikes page was replaced with a home page. 
+
+  - Social media links were added to the footer.
 
 - ### Design
 
