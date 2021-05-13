@@ -51,7 +51,7 @@ Hike Logger is a website that allows hiking enthusiasts in Ireland to log and st
 
     3. View all the hikes I have completed in a table that I can sort based on the hike length or time to complete.
     4. Search the table of hikes so I can filter the hikes based on the search terms.
-    5. View each hike on a seperate page which shows all the information on the hike.
+    5. View each hike on a separate page which shows all the information on the hike.
     6. Update the information of a hike I have added to the website.
     7. Delete a hike that I have added.
     8. View statistics about my hikes such as the total amount of hikes I have completed and the average length of all my hikes.
@@ -100,7 +100,7 @@ Hike Logger is a website that allows hiking enthusiasts in Ireland to log and st
   - #### Colour Scheme
 
     I used a green with brown colour scheme for this project which I obtained from [schemecolor](https://www.schemecolor.com/green-with-brown-color-combination.php).
-    This palette has 5 colors which are Café Noir (#543B23), Pastel Brown (#846954), White Coffee (#DFDFD4), June Bud (#A5D74D) and Dark Lemon Lime (#81BE1C).
+    This palette has 5 colours which are Café Noir (#543B23), Pastel Brown (#846954), White Coffee (#DFDFD4), June Bud (#A5D74D) and Dark Lemon Lime (#81BE1C).
     
     ![Image](static/images/readme/palette.png)
 
@@ -116,11 +116,11 @@ Hike Logger is a website that allows hiking enthusiasts in Ireland to log and st
 
   - Responsive Bootstrap Navigation bar
 
-    The links in the navigation bar change depending on the type of user visitng the site. For a guest or a user not logged in, the navbar displays links to the home page as well as the login and register pages. 
+    The links in the navigation bar change depending on the type of user visiting the site. For a guest or a user not logged-in, the navbar displays links to the home page as well as the login and register pages. 
 
     ![Image](static/images/readme/navbar_logged_out.png)
 
-     For a logged in user, the navbar displays links to the home page, hikes page, profile page, add a hike page and the logout page. A welcome message is displayed with user's name.
+     For a logged-in user, the navbar displays links to the home page, hikes page, profile page, add a hike page and the logout page. A welcome message is displayed with the user's name.
 
     ![Image](static/images/readme/navbar_user.png)
 
@@ -146,7 +146,7 @@ Hike Logger is a website that allows hiking enthusiasts in Ireland to log and st
 
   ![Image](static/images/readme/latest.png)
 
-  The homepage shows the last 4 hikes hikes added to the website. For users that are logged in, a button is displayed with the text view. This button redirects the user to a page that displays more information about that hike. For guests to the website, the button is replaced with a login button which redirects the user to the login page. 
+  The homepage shows the last four hikes added to the website. For users that are logged-in, a button is displayed with the text view. This button redirects the user to a page that displays more information about that hike. For guests to the website, the button is replaced with a login button which redirects the user to the login page. 
 
 
 - ### Hikes page
@@ -154,31 +154,31 @@ Hike Logger is a website that allows hiking enthusiasts in Ireland to log and st
   ![Image](static/images/readme/hikes_stats.png)
 
 
-  The hikes page shows stats about all the hikes on the site. The stats include total number of hikes, total length of all the hikes combined and the average hike length. It also displays the number of hikes for each area.
+  The hikes page shows stats about all the hikes on the site. The stats include the total number of hikes, the total length of all the hikes combined and the average hike length. It also displays the number of hikes for each area.
 
 
   ![Image](static/images/readme/hikes_table.png)
 
-  A table is displayed below the hike stats which contains all the hikes on the site. The table is responsive, a user can sort the table by clicking on the table headers. This is useful if the user wants to sort the hikes by length or time. A search bar is provided which allows the user to filter the hikes based on their search terms. This feature allows the user to see, for example, only hikes located in the Kerry area.
+  A table is displayed below the hike stats which contains all the hikes on the site. The table is responsive, a user can sort the table by clicking on the table headers. This is useful if the user wants to sort the hikes by length or by time. A search bar is provided which allows the user to filter the hikes based on their search terms. This feature allows the user to see, for example, only hikes located in the Kerry area.
 
 
 - ### Profile page
 
   ![Image](static/images/readme/profile.png)
 
-  The profile page is similar to the hikes pages with the difference being that the profile page show the stats and hikes relevant to the logged in user.
+  The profile page is similar to the hikes pages with the difference being that the profile page shows the stats and hikes relevant to the logged-in user.
 
 
 - ### Hike page
 
   ![Image](static/images/readme/hike.png)
 
-  Each hike on the site has its own page which displays the name, notes, stats and a picture of the hike. The stats section has a feature which displays all the registered users that have completed the hike. Below the stats card there is a card that displays the date that the logged in user completed the hike. The user can mark the hike as incomplete if they wish to do so.
+  Each hike on the site has its own page which displays the name, notes, stats and a picture of the hike. The stats section has a feature that displays all the registered users that have completed the hike. Below the stats card, there is a card that displays the date that the logged-in user completed the hike. The user can mark the hike as incomplete if they wish to do so.
 
   ![Image](static/images/readme/incomplete_btn.png)
   ![Image](static/images/readme/incomplete_form.png)
 
-  If they have not completed the hike they have the option to do so by clicking on the complete button. This will redirect the user to a new page where they can choose a date for when they completed the hike. Marking a hike as complete will add the users name to the 'hiked by' list in the stats section. Marking a hike as incomplete will remove them from the list. 
+  If they have not completed the hike they have the option to do so by clicking on the complete button. This will redirect the user to a new page where they can choose a date for when they completed the hike. Marking a hike as complete will add the user's name to the 'hiked by' list in the stats section. Marking a hike as incomplete will remove them from the list. 
 
   ![Image](static/images/readme/complete_btn.png)
   ![Image](static/images/readme/complete_form.png)
@@ -196,7 +196,7 @@ Hike Logger is a website that allows hiking enthusiasts in Ireland to log and st
 
   ![Image](static/images/readme/add_hike.png)
 
-  A form is provided for the user to add a hike. The user must add a hike name, area, length, time, hike notes, photo url and a date. If the user does not fill out a section of the form and tries to submit the form, a message is displayed prompting the user to complete the required field. The form can be only be submitted once each field is filled correctly. A dropdown menu is provided for the areas and times. At present the user has three choices to choose from for the area and time. Additional areas and times can be added by an admin account.
+  A form is provided for the user to add a hike. The user must add a hike name, area, length, time, hike notes, photo URL and a date. If the user does not fill out a section of the form and tries to submit the form, a message is displayed prompting the user to complete the required field. The form can be only be submitted once each field is filled correctly. A dropdown menu is provided for the areas and times. At present, the user has three choices to choose from for the area and time. Additional areas and times can be added by an admin account.
   
   ![Image](static/images/readme/areas.png)
   
@@ -215,7 +215,7 @@ The following are elements that could be added to the site in future development
 
 - An option for a user to upload a hike to Google Maps or OpenStreetMap.
 
-- A user can upload an image instead of a url.
+- A user can upload an image instead of a URL.
 
 - A gallery of photos or each hike.
 
@@ -231,7 +231,7 @@ The following are elements that could be added to the site in future development
 
 - An option for a user to submit additional hike statistics such as the elevation gain, total ascent or descent.
 
-- A secton for a user to store personal notes about the hike that they can keep private or mark as public should they wish to do so.
+- A section for a user to store personal notes about the hike that they can keep private or mark as public should they wish to do so.
 
 ## Technologies Used
 
