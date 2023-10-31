@@ -1,6 +1,6 @@
 <div align="center">
-    <a href="https://hike-logger.herokuapp.com/" target="_blank"><img src="static/images/readme/home_screenshot.png" alt="hike logger home"></a>
-    <h3><a href="https://hike-logger.herokuapp.com/" target="_blank">Click here</a> to view the site on Heroku.</h3>
+    <a href="https://hike-logger.onrender.com/" target="_blank"><img src="static/images/readme/home_screenshot.png" alt="hike logger home"></a>
+    <h3><a href="https://hike-logger.onrender.com/" target="_blank">Click here</a> to view the site.</h3>
 </div>
 
 ## Table of Contents
